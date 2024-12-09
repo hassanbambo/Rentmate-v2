@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentmate.ng | shortlet</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/index.css">
+    <style>
+        .shortlist-area {
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 100px 75px;
+        }
+        .shortlist-area .header{
+            color: #000;
+            display: flex;
+            justify-content: space-between;
+        }
+        .shortlist-area .header a {
+            color: #78D253;
+            font-size: 18px;
+            line-height: auto;
+        }
+        .shortlist-empty {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+         .shortlist-empty > div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+         }
+         .shortlist-empty > div > div:last-child {
+            align-self: stretch;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #78D253;
+            border-radius: 10px;
+            margin-top: 8px;
+        }
+        .shortlist-empty > div > div:last-child a {
+            color: #fff;
+            padding: 15px;
+            align-self: stretch;
+            flex: 1;
+            text-align: center;
+            font-size: 18px;
+            line-height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="head-wrap">
+                <div class="logo__wrap"><a href="index.html"><img style="max-width: 170px;" src="assets/images/logo.png" alt="Logo"></a></div>
+                <nav class="navbar">
+                    <ul class="menu">
+                        <li class="dropdown">
+                            <a href="#">For Sale</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">Land</a></li>
+                                <li><a href="listings.html">House</a></li>
+                                <li><a href="listings.html">Flat & Apartment</a></li>
+                                <li><a href="listings.html">Commercial Property</a></li>
+                                <li><a href="listings.html">All Properties</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">For Rent</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">House</a></li>
+                                <li><a href="listings.html">Office Space</a></li>
+                                <li><a href="listings.html">Land Lease</a></li>
+                                <li><a href="listings.html">Flats & Apartments</a></li>
+                                <li><a href="listings.html">All Properties</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Shortlet</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">Shortlets in Ajah</a></li>
+                                <li><a href="listings.html">Shortlets in Lekki</a></li>
+                                <li><a href="listings.html">All Shortlets</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Flatmates</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">Web Development</a></li>
+                                <li><a href="listings.html">App Development</a></li>
+                                <li><a href="listings.html">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Request</a>
+                            <ul class="submenu">
+                                <li><a href="make-request.html">Post a Request</a></li>
+                                <li><a href="view-all-request.html">All Property Requests</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Agents</a>
+                            <ul class="submenu">
+                                <li><a href="all-agents.html">All Real Estate Agents</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="btn__wrap">
+                    <button class="post-btn">Post Property</button>
+                    <a href="#">Sign Up</a>
+                    <a href="#">Login</a>
+                </div>
+            </div>
+        </header>
+
+        
+    
+        
+        <!-- THE SHORTLET AREA  -->
+
+        <section class="shortlist-area">
+            <div class="header">
+                <div>
+                    <h5>Home / Profile</h5>
+                    <h3>Shortlets</h3>
+                </div>
+
+                <div> <a href="#">Click Notification on Nav Bar</a></div>
+            </div>
+            
+            <div class="shortlist-empty">
+                <div>
+                    <img src="assets/images/shorlist-empty.jpg" alt="">
+                    <p>No Properties Shorlisted </p>
+                    <div><a href="listings.html">Explore Properties</a></div>
+                </div>
+                
+            </div>
+        </section>
+
+
+     
+
+        <div class="info-icon">
+            <img src="public/fisrcommentinfo.svg" alt="">
+        </div>
+
+
+        <!-- THE FOOTER  -->
+
+        <footer class="main-footer">
+            <div class="brand-copyright">
+                <div class="brand-logo"><img src="assets/images/Logotype.png" alt=""></div>
+                <span class="copyright">Copyright 2024</span>
+            </div>
+
+            <div class="links">
+                <div class="footer-links">
+                    <h6>FOR SALE</h6>
+                    <ul>
+                        <li><a href="#">New Homes</a></li>
+                        <li><a href="#">Commercial properties</a></li>
+                        <li><a href="#">Estate agents</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h6>FOR RENT</h6>
+                    <ul>
+                        <li><a href="#">Commercial properties</a></li>
+                        <li><a href="#">Letting agents</a></li>
+                        <li><a href="#">Subscribe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h6>CONTACT</h6>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Email me</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </footer>
+        
+
+
+    </div>
+</body>
+</html>

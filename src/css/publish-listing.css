@@ -1,0 +1,125 @@
+.back-btn {
+    margin-top: 30px;
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.back-btn a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #667085;
+    font: 14px/24px var(--font-family);
+}
+
+.listing-details {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.title-publish {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-publish .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.title-publish .head>div {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.title-publish .head>div span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.title-publish button {
+    outline: 0;
+    border: 0;
+    padding: 5px;
+}
+
+.img-grid .previews:nth-child(1) {
+    border-radius: 15px 0 0 15px;
+}
+
+.img-grid .previews:nth-child(3) {
+    border-radius: 0  15px 0 0;
+}
+
+.img-grid .previews:nth-child(5) {
+    border-radius: 0 0 15px 0;
+}
+
+.previews span:last-child {
+    width: 20px;
+    height: 24px;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background-color: #FCFCFD;
+    border: 1px solid #F2F4F7;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.listing-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+    
+}
+
+.listing-info .listing-basics, .listing-info .property-rooms {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    border: 2px solid #EAECF0;
+    border-radius: 12px;
+}
+
+.listing-info .listing-basics>div:nth-child(3), .listing-info .property-rooms>div:nth-child(3) {
+    border-top: 1px solid #EAECF0;
+    border-bottom: 1px solid #EAECF0;
+}
+
+.listing-info label {
+    color: #1D2939;
+    font: 600 14px/20px var(--font-family);
+}
+
+.listing-info .edit-btn {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-weight: 700;
+}
+
+.listing-basics>div, .property-rooms>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px 0;
+} 
+
+.listing-basics>div>div:first-child, .property-rooms>div>div:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.listing-basics>div>div:first-child span, .property-rooms>div>div:first-child span {
+    font: 14px/24px var(--font-family);
+    color: #475467;
+}

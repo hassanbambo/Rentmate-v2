@@ -1,0 +1,966 @@
+.search-filter {
+    /* width: 100%; */
+    /* align-self: stretch; */
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-form {
+    width: 862px;
+    max-height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 75px;
+}
+
+.search-form > .form-group {
+    width: 688px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #c7c9d1;
+    border-radius: var(--border-radius-sm);
+    padding: 6px var(--spacing-md) ;
+    margin: 15px 0;
+}
+
+
+.search-form .filters-overlay {
+    width: 120px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    gap: 8px;
+    background-color: #fff;
+    color: #71717A;
+    border: 1px solid #333;
+    border-radius: 50px;
+    font: 500 14px/24px var(--font-family);
+}
+
+.filters-overlay > * {padding: 0;}
+
+.filters-overlay .search-icon {
+    width: 16px;
+    height: 16px;
+}
+
+#searchQuery {
+    flex: 80%;
+    outline: 0;
+    border: 0;
+    padding: 2px;
+    font-size: var(--base-font-size);
+}
+
+.cta-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--base-font-size);
+    font-weight: 600;
+    padding: var(--spacing-sm) var(--spacing-md);
+    color: #fff;
+    background-color: var(--button-color);
+    border: 0;
+    border-radius: 8px;
+    transition: background-color var(--transition-fast) ease;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color);
+}
+
+.cta-button > * {
+    margin: auto 3px;
+}
+
+.listings-page {
+    margin: 0 auto;
+    color: var(--secondary-color-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    /* padding: 0 60px; */
+}
+
+section.listings-page > div {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 48px;
+}
+
+.listings-page h2 {
+    align-self: flex-start;
+    font: 500 32px/24px var(--font-family);
+    /* margin-left: 88px; */
+}
+
+.filter-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    font: 16px/24px var(--font-family);
+    color: #15253d;
+}
+
+.filter-modal-content {
+    position: relative;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 24px;
+    width: 90%;
+    max-width: 903px;
+    /* height: 90%; */
+    height: auto;
+    min-height: 100vh;
+    border-radius: 10px;
+    /* max-width: 1100px;
+    max-height: 520px; */
+    /* overflow-y: auto; */
+
+
+    outline: 1px solid black;
+}
+
+.filter-modal .filters {
+    /* padding: 0; */
+    padding-top: 40px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+    width: 100%;
+}
+
+.filter-modal .filters > * { 
+    width: 100%;
+}
+
+.filter-modal h4 {
+    color: #15253d;
+    text-align: center;
+    font-weight: 600;
+    padding: 15px 0;
+    
+    width: 902.5px;
+    position: fixed;
+    top: 0px;
+    left: 172px;
+    
+    background-color: #fff;
+
+    z-index: 100000;
+}
+
+.filter-modal .filter-sets {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+}
+
+.filter-modal .filter-sets ul {
+    display: flex;
+    align-items: center;
+}
+
+.filter-modal .filter-sets > ul {
+    justify-content: space-between;
+}
+
+.filter-modal .filter-sets > ul li {
+    padding: 16px 24px;
+    border: 1px solid #EAECF0;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+}
+
+.filter-modal .filter-sets > ul li:hover {
+    background-color: #78D253;
+}
+
+.filter-sets .price-range {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ***************************COME BACK AND ADDRESS HERE ****************************************** */
+.filter-sets .price-range > div {
+    width: 40%;
+    padding: 16px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+
+    outline: 1px solid brown;
+}
+
+.filter-sets .price-range > div label {
+    margin-left: 60px;
+}
+
+.filter-sets .price-range select {
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+    width: 14px;
+    position: relative;
+}
+
+.filter-sets .price-range select option {
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    width: 400px;
+    height: 50px;
+    overflow-y: scroll;
+    
+}
+/* *************************************************************************** */
+
+
+.filter-sets .type h6, .rooms-bath h6 {
+    font-weight: 600;
+}
+
+.filter-sets .type ul {
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.filter-sets .type ul li {
+    margin-top: 24px;
+    padding: 16px;
+    /* border: 1px solid #EAECF0; */
+    border: 1px solid #c7c9d1;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.filter-sets .type ul li:hover {
+    border: 1px solid #78D253;
+}
+
+.rooms-bath {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.rooms-bath .bedrooms,
+.rooms-bath .bed,
+.rooms-bath .bathroom  {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.rooms-bath .bedrooms >span,
+.rooms-bath .bed >span, 
+.rooms-bath .bathroom >span {
+    color: #71717A;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.rooms-bath > div, .rooms-bath > div >ul {
+    gap: 16px;
+}
+
+.rooms-bath > div >ul li {
+    padding: 15px 32px;
+    border: 1px solid #c7c9d1;
+    border-radius: 30px;
+    transition: all .2s ease-in-out;
+}
+
+.rooms-bath > div >ul li:hover {
+    background-color: #78D253;
+    color: #fff;
+}
+
+
+
+
+.filter-modal .clear-apply {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-modal .clear-apply > button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: #15253d;
+}
+
+.filter-modal .clear-apply > button:first-child {
+    border: 0;
+}
+.filter-modal .clear-apply > button:first-child:hover {
+    background-color: #c7c9d1;
+}
+
+.filter-modal .clear-apply > button:last-child {
+    border: 1px solid #c7c9d1;
+}
+.filter-modal .clear-apply > button:last-child:hover {
+    background-color: #78D253;
+    color: #fff;
+}
+
+footer.other-footer {display: flex;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *************************************************************************************
+
+                        MEDIUM SCREEN STYLES 
+                        
+************************************************************************************** */
+
+@media screen and (max-width: 1230px) {
+    
+    .search-form {
+        width: 100%;
+        min-height: 60px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        gap:10px;
+    }
+
+    .search-form > .form-group {
+        width: 100%;
+    }
+    
+    .search-form .filters-overlay {
+        padding: 10px 16px;
+    }
+    
+    .listings-page {
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    
+    section.listings-page > div {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .listings-page h2 {
+        /* align-self: flex-start; */
+        font: 500 30px/36px var(--font-family);
+    }
+
+    .card-grid {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 15px;
+        padding: 0;
+    }
+    
+    .filter-modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        overflow-y: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        font: 16px/24px var(--font-family);
+        color: #15253d;
+    }
+    
+    .filter-modal-content {
+        position: relative;
+        margin: 30px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        padding: 24px;
+        width: 90%;
+        max-width: 903px;
+        /* height: 90%; */
+        height: auto;
+        min-height: 100vh;
+        border-radius: 10px;
+        /* max-width: 1100px;
+        max-height: 520px; */
+        /* overflow-y: auto; */
+    
+    
+        outline: 1px solid black;
+    }
+    
+    .filter-modal .filters {
+        /* padding: 0; */
+        padding-top: 40px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 32px;
+        width: 100%;
+    }
+    
+    .filter-modal .filters > * { 
+        width: 100%;
+    }
+    
+    .filter-modal h4 {
+        color: #15253d;
+        text-align: center;
+        font-weight: 600;
+        padding: 15px 0;
+        
+        width: 902.5px;
+        position: fixed;
+        top: 0px;
+        left: 172px;
+        
+        background-color: #fff;
+    
+        z-index: 100000;
+    }
+    
+    .filter-modal .filter-sets {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 32px;
+    }
+    
+    .filter-modal .filter-sets ul {
+        display: flex;
+        align-items: center;
+    }
+    
+    .filter-modal .filter-sets > ul {
+        justify-content: space-between;
+    }
+    
+    .filter-modal .filter-sets > ul li {
+        padding: 16px 24px;
+        border: 1px solid #EAECF0;
+        border-radius: 6px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color .2s ease-in-out;
+    }
+    
+    .filter-modal .filter-sets > ul li:hover {
+        background-color: #78D253;
+    }
+    
+    .filter-sets .price-range {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* ***************************COME BACK AND ADDRESS HERE ****************************************** */
+    .filter-sets .price-range > div {
+        width: 40%;
+        padding: 16px;
+        font-weight: 500;
+        text-align: center;
+        border-radius: 8px;
+    
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+    
+        outline: 1px solid brown;
+    }
+    
+    .filter-sets .price-range > div label {
+        margin-left: 60px;
+    }
+    
+    .filter-sets .price-range select {
+        border: 0;
+        outline: 0;
+        margin-left: 20px;
+        width: 14px;
+        position: relative;
+    }
+    
+    .filter-sets .price-range select option {
+        position: absolute;
+        left: 0px;
+        top: 20px;
+        width: 400px;
+        height: 50px;
+        overflow-y: scroll;
+        
+    }
+    /* *************************************************************************** */
+    
+    
+    .filter-sets .type h6, .rooms-bath h6 {
+        font-weight: 600;
+    }
+    
+    .filter-sets .type ul {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    
+    .filter-sets .type ul li {
+        margin-top: 24px;
+        padding: 16px;
+        /* border: 1px solid #EAECF0; */
+        border: 1px solid #c7c9d1;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    
+    .filter-sets .type ul li:hover {
+        border: 1px solid #78D253;
+    }
+    
+    .rooms-bath {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .rooms-bath .bedrooms,
+    .rooms-bath .bed,
+    .rooms-bath .bathroom  {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .rooms-bath .bedrooms >span,
+    .rooms-bath .bed >span, 
+    .rooms-bath .bathroom >span {
+        color: #71717A;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    
+    .rooms-bath > div, .rooms-bath > div >ul {
+        gap: 16px;
+    }
+    
+    .rooms-bath > div >ul li {
+        padding: 15px 32px;
+        border: 1px solid #c7c9d1;
+        border-radius: 30px;
+        transition: all .2s ease-in-out;
+    }
+    
+    .rooms-bath > div >ul li:hover {
+        background-color: #78D253;
+        color: #fff;
+    }
+    
+    
+    
+    
+    .filter-modal .clear-apply {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .filter-modal .clear-apply > button {
+        padding: 12px 20px;
+        border-radius: 8px;
+        color: #15253d;
+    }
+    
+    .filter-modal .clear-apply > button:first-child {
+        border: 0;
+    }
+    .filter-modal .clear-apply > button:first-child:hover {
+        background-color: #c7c9d1;
+    }
+    
+    .filter-modal .clear-apply > button:last-child {
+        border: 1px solid #c7c9d1;
+    }
+    .filter-modal .clear-apply > button:last-child:hover {
+        background-color: #78D253;
+        color: #fff;
+    }
+    
+    footer.other-footer {display: flex;}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *************************************************************************************
+
+                        MOBILE SCREEN STYLES 
+                        
+************************************************************************************** */
+
+@media screen and (max-width: 600px) {
+
+    .search-filter {
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .search-form {
+        width: 100%;
+        min-height: 60px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:10px;
+    }
+
+    .search-form > .form-group {
+        width: 100%;
+    }
+    
+    
+    .search-form .filters-overlay {
+        align-self: flex-end;
+        padding: 10px 16px;
+        visibility: hidden;
+    }
+    
+    .listings-page {
+        margin: 60px auto;
+        color: var(--secondary-color-1);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    
+    section.listings-page > div {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .listings-page h2 {
+        /* align-self: flex-start; */
+        font: 500 26px/28px var(--font-family);
+    }
+
+    .card-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: auto;
+    }
+    
+    .filter-modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        overflow-y: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        font: 16px/24px var(--font-family);
+        color: #15253d;
+    }
+    
+    .filter-modal-content {
+        position: relative;
+        margin: 30px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        padding: 24px;
+        width: 90%;
+        max-width: 903px;
+        /* height: 90%; */
+        height: auto;
+        min-height: 100vh;
+        border-radius: 10px;
+        /* max-width: 1100px;
+        max-height: 520px; */
+        /* overflow-y: auto; */
+    
+    
+        outline: 1px solid black;
+    }
+    
+    .filter-modal .filters {
+        /* padding: 0; */
+        padding-top: 40px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 32px;
+        width: 100%;
+    }
+    
+    .filter-modal .filters > * { 
+        width: 100%;
+    }
+    
+    .filter-modal h4 {
+        color: #15253d;
+        text-align: center;
+        font-weight: 600;
+        padding: 15px 0;
+        
+        width: 902.5px;
+        position: fixed;
+        top: 0px;
+        left: 172px;
+        
+        background-color: #fff;
+    
+        z-index: 100000;
+    }
+    
+    .filter-modal .filter-sets {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 32px;
+    }
+    
+    .filter-modal .filter-sets ul {
+        display: flex;
+        align-items: center;
+    }
+    
+    .filter-modal .filter-sets > ul {
+        justify-content: space-between;
+    }
+    
+    .filter-modal .filter-sets > ul li {
+        padding: 16px 24px;
+        border: 1px solid #EAECF0;
+        border-radius: 6px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color .2s ease-in-out;
+    }
+    
+    .filter-modal .filter-sets > ul li:hover {
+        background-color: #78D253;
+    }
+    
+    .filter-sets .price-range {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* ***************************COME BACK AND ADDRESS HERE ****************************************** */
+    .filter-sets .price-range > div {
+        width: 40%;
+        padding: 16px;
+        font-weight: 500;
+        text-align: center;
+        border-radius: 8px;
+    
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+    
+        outline: 1px solid brown;
+    }
+    
+    .filter-sets .price-range > div label {
+        margin-left: 60px;
+    }
+    
+    .filter-sets .price-range select {
+        border: 0;
+        outline: 0;
+        margin-left: 20px;
+        width: 14px;
+        position: relative;
+    }
+    
+    .filter-sets .price-range select option {
+        position: absolute;
+        left: 0px;
+        top: 20px;
+        width: 400px;
+        height: 50px;
+        overflow-y: scroll;
+        
+    }
+    /* *************************************************************************** */
+    
+    
+    .filter-sets .type h6, .rooms-bath h6 {
+        font-weight: 600;
+    }
+    
+    .filter-sets .type ul {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    
+    .filter-sets .type ul li {
+        margin-top: 24px;
+        padding: 16px;
+        /* border: 1px solid #EAECF0; */
+        border: 1px solid #c7c9d1;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    
+    .filter-sets .type ul li:hover {
+        border: 1px solid #78D253;
+    }
+    
+    .rooms-bath {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .rooms-bath .bedrooms,
+    .rooms-bath .bed,
+    .rooms-bath .bathroom  {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .rooms-bath .bedrooms >span,
+    .rooms-bath .bed >span, 
+    .rooms-bath .bathroom >span {
+        color: #71717A;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    
+    .rooms-bath > div, .rooms-bath > div >ul {
+        gap: 16px;
+    }
+    
+    .rooms-bath > div >ul li {
+        padding: 15px 32px;
+        border: 1px solid #c7c9d1;
+        border-radius: 30px;
+        transition: all .2s ease-in-out;
+    }
+    
+    .rooms-bath > div >ul li:hover {
+        background-color: #78D253;
+        color: #fff;
+    }
+    
+    
+    
+    
+    .filter-modal .clear-apply {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .filter-modal .clear-apply > button {
+        padding: 12px 20px;
+        border-radius: 8px;
+        color: #15253d;
+    }
+    
+    .filter-modal .clear-apply > button:first-child {
+        border: 0;
+    }
+    .filter-modal .clear-apply > button:first-child:hover {
+        background-color: #c7c9d1;
+    }
+    
+    .filter-modal .clear-apply > button:last-child {
+        border: 1px solid #c7c9d1;
+    }
+    .filter-modal .clear-apply > button:last-child:hover {
+        background-color: #78D253;
+        color: #fff;
+    }
+    
+    footer.other-footer {display: flex;}
+
+
+
+
+
+
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="src/css/dashboard-agent-profile.css">
+    <link rel="stylesheet" href="src/css/post-property.css">
+    <link rel="stylesheet" href="src/css/publish-listing.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- THE DASHBOARD MAIN MENU  -->
+
+        <div class="dashboard-menu">
+            <div class="logo"><a href="index.html"><img src="assets/images/logo.png" alt=""></a></div>
+            <div class="menu-earn-extra">
+                <ul>
+                    <li><a href="buddy.html">Switch to Rent Buddy</a></li>
+                    <li><a href="dashboard-agent-profile.html"><img src="assets/icons/view-profile.svg" alt="">View Profile</a></li>
+                    <li><a href="dashboard-listing.html"><img src="assets/icons/listing-hb.svg" alt="">Listings</a></li>
+                    <li><a href="post-property.html"><img src="assets/icons/add-property.svg" alt="">Add Property</a></li>
+                    <li><a href="subscription.html"><img src="assets/icons/subscription.svg" alt="">Subscription</a></li>
+                    <li><a href="community.html"><img src="assets/icons/community.svg" alt="">Join Community</a></li>
+                    <li><a href="settings.html"><img src="assets/icons/setting.svg" alt="">Settings</a></li>
+                    <li><a href="#"><img src="assets/icons/logout.svg" alt="">Log out</a></li>
+                </ul>
+                
+                <div class="earn-extra"><a href="#"><img src="assets/images/earn-extra.png" alt=""></a></div>
+            </div>
+        </div>
+
+
+        <!-- DASHBOARD CONTENT AREA  -->
+
+        <div class="dashboard-main-area">
+            <div>
+                <header>
+                    <h4>Add a Property</h4>
+                    <button>Add Property</button>
+                </header>
+
+                <div class="verify-now">
+                    <img src="assets/icons/info (1).svg" alt="">
+                    <p>Verify Your Identity by completing your Registration</p>
+                    <a href="#">Verify Now</a>
+                </div>
+
+                <div class="back-btn"><a href="#"><img src="assets/icons/back-arrow.png" alt=""> Back </a></div>
+
+                <div class="listing-details">
+                    <div class="title-publish">
+                        <div class="head">
+                            <h2>4 Bedroom Duplex Ikeja Lagos</h2>
+                            <div>
+                                <span><img src="public/component-1-1.svg" alt="">Ikeja, Lagos</span>
+                                <span><img width="22px" src="assets/icons/user-avatar.svg" alt="">OptionsX</span>
+                            </div>
+                        </div>
+                        <button><span class="on-off"><span></span></span>Publish</button>
+                    </div>
+
+                    <div class="grid-gallery">
+                        <div class="img-grid">
+                            <div class="previews">
+                                <img src="assets/images/gallery1.png" alt="">
+                                <span><img src="assets/icons/more-vertical.svg" alt=""></span>
+                            </div>
+                            <div class="previews">
+                                <img src="assets/images/gallery2.png" alt="">
+                                <span><img src="assets/icons/more-vertical.svg" alt=""></span>
+                            </div>
+                            <div class="previews">
+                                <img src="assets/images/image-11.png" alt="">
+                                <span><img src="assets/icons/more-vertical.svg" alt=""></span>
+                            </div>
+                            <div class="previews">
+                                <img src="assets/images/image3.jpg"  alt="">
+                                <span><img src="assets/icons/more-vertical.svg" alt=""></span>
+                            </div>
+                            <div class="previews">
+                                <img src="assets/images/image-11.png"  alt="">
+                                <span><img src="assets/icons/more-vertical.svg" alt=""></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="listing-info">
+                        <div class="listing-basics">
+                            <h4>Listing Basics</h4>
+                            <div class="title">
+                                <div>
+                                    <label for="title">Listing title</label>
+                                    <span class="display-title">Sea view Room</span>
+                                    <input type="text" name="edit-title" id="edit-title" hidden>
+                                </div>
+                                <button class="edit-btn">Edit</button>
+                            </div>
+
+                            <div class="description">
+                                <div>
+                                    <label for="description">Property Description </label>
+                                    <span class="display-description">Prominently positioned on the cusp of the Barangaroo precinct, this generous sized 3 bedroom apartment takes advantage of its prime north western aspect with views stretching from Barangaroo Reserve, Lavender Bay, Sydney Harbour and through to the Blue Mountains. The 141m2 seamless floor plan is amongst the largest of any 3 bedroom layouts in the building and is highly desirable.
+                                        -Located on the highest level of this layout-Open plan living and dining areas with floor-to-ceiling glass-Fully equipped kitchen complete with a walk-in-pantry-Private master bedroom with walk-in-robe, marble ensuite with bathtub and access to the terrace-2nd and 3rd bedrooms are both King sized-2nd full marble bathroom features another bathtub plus there is an additional powder room</span>
+                                    <input type="text" name="edit-description" id="edit-description" hidden>
+                                </div>
+                                <button class="edit-btn">Edit</button>
+                            </div>
+
+                            <div class="location">
+                                <div>
+                                    <label for="location"> Location </label>
+                                    <span class="display-location">Ikeja, Lagos</span>
+                                    <input type="text" name="edit-location" id="edit-location" hidden>
+                                </div>
+                                <button class="edit-btn">Edit</button>
+                            </div>
+
+                        </div>
+
+                        <div class="property-rooms">
+                            <h4>Property and Rooms </h4>
+                            <div class="property-room">
+                                <div>
+                                    <label for="property-room"> Property type </label>
+                                    <span class="display-property-room">Property type: Rent</span>
+                                    <input type="text" name="edit-property-room" id="edit-property-room" hidden>
+                                </div>
+                                <button class="edit-btn">Edit</button>
+                            </div>
+
+                            <div class="room-space">
+                                <div>
+                                    <label for="room-space"> Rooms and spaces </label>
+                                    <span class="display-room-space">Sea view Room</span>
+                                    <input type="text" name="edit-room-space" id="edit-room-space" hidden>
+                                </div>
+                                <button class="edit-btn">Edit</button>
+                            </div>
+
+                            <div class="amenities">
+                                <div>
+                                    <label for="amenities"> Amenities </label>
+                                    <div>
+                                        <ul>
+                                            <li>Air conditioner</li>
+                                            <li>Dedicated workspace</li>
+                                            <li>T.V.</li>
+                                            <li>Air conditioner</li>
+                                            <li>Dedicated workspace</li>
+                                            <li>T.V.</li>
+                                        </ul>
+                                        <button>View All</button>
+                                    </div>
+                                </div>
+                                <button class="edit-btn">Edit</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

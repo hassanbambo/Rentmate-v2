@@ -1,0 +1,11 @@
+.dashboard-main-area header button, .agent-profile .checks  {
+    visibility: hidden;
+}
+
+.agent-profile {
+    margin-top: 30px;
+}
+
+.agent-profile h4 {
+    font: 600 20px/24px var(--font-family);
+}

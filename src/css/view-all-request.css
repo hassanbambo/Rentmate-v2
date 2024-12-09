@@ -1,0 +1,178 @@
+* { color: #000;}
+
+.filter-request {
+    margin: 0 auto;
+    padding: 100px 100px 55px;
+}
+
+.filter-request > div {
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.filter-request > div > * { 
+    width: 100%;
+}
+
+.filter-request .header {
+    padding: 0;
+}
+
+.filter-request .header h2 {
+    margin: 0;
+    font: 500 64px/68px var(--font-family);
+}
+
+.filter-request .filter-by {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.filter-by .form-group {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-request .filter-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+.filter-request .filter-btn button {
+    background-color: #78D253;
+    color: #fff;
+    font: 500 14px/24px var(--font-family);
+    /* padding: 18px 40px; */
+    width: 113px;
+    height: 60px;
+    border-radius: 8px;
+    border: 0;
+}
+
+/* FILTERED REQUEST SECTION  */
+
+section.filtered-requests {
+    margin: 0 auto;
+    padding: 10px 50px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.request-grid {
+    width: 100%;
+    display: grid;
+    height: auto;
+    min-height: 400px;
+    grid-template-columns: auto auto auto;
+    padding: 10px 0;
+    gap: 70px 25px;
+    justify-content: center;
+    align-content: center;
+    /* overflow-x: auto; */
+}
+
+/* THE REQUEST CARD   */
+
+.request-card {
+    padding: 10px;
+    border: 1.5px solid #D0D5DD;
+    border-radius: 10px;
+    /* min-width: 393px; */
+    /* max-width: 393px; */
+    min-height: 220px;
+    /* width: 393px; */
+    width: 373px;
+    height: 220px;
+}
+
+.request-card > div {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    
+}
+
+.request-card .title {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+}
+
+.request-card .title h4 {font: 700 20px/22px var(--font-family); flex: 1;}
+
+.request-card .title .icon {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    border: 0;
+    background-color: transparent;
+}
+
+
+.request-card .details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.request-card .details div {
+    display: flex;
+}
+
+.request-card .details > div{
+    gap: 10px;
+}
+
+.request-card .details > div div {
+    /* flex: 50%; */
+    gap: 5px;
+    /* font: 14px/20px var(--font-family); */
+    font: 13px/20px var(--font-family);
+}
+
+.request-card .details > div div:first-child {flex: 40%;}
+
+.request-card .details > div div:last-child {flex: 55%;}
+
+.request-card .details > div span:first-child {
+    font-weight: bolder;
+}
+
+.request-card .more-info {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: auto;
+    margin-bottom: 0;
+    border: 1.5px solid #D0D5DD;
+    border-radius: 6px;
+}
+
+.request-card .more-info a {
+    font: 500 14px/20px var(--font-family);
+    width: 100%;
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    transition: all .3s ease-in-out;
+}
+
+.request-card .more-info a:hover {
+    background-color: #ccc;
+}
+

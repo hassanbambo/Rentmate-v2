@@ -1,0 +1,524 @@
+/* ********************* GLOBAL STYLES ************************* */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+:root {
+    /* Fonts Properties */
+    --font-family: "Inter", sans-serif;
+    --base-font-size: 16px;
+    --h1-font: normal 72px/90px var(--font-family);
+    --h2-font: normal 56px/60px var(--font-family);
+    --h3-font: normal 40px/48px var(--font-family);
+    --h4-font: normal 32px/40px var(--font-family);
+    --h5-font: normal 24px/32px var(--font-family);
+    --h6-font: normal 20px/24px var(--font-family);
+    --subtitle-font: normal 20px/28px var(--font-family);
+    --button-font: 500 18px/24px var(--font-family);
+    --body-font-1: normal 16px/24px var(--font-family);
+    --body-font-2: normal 14px/20px var(--font-family);
+    --blockquote-font: italic normal 32px/40px var(--font-family);
+    --img-subtitle-font: italic normal 16px/24px var(--font-family);
+    --line-height: 1.5;
+
+    /* Colors  */
+    --primary-color-1: #8BCF1E;
+    --primary-color-2: #97D435;
+    --primary-color-3: #A2D94B; 
+    --accent-color: #58E61E;
+    --secondary-color-1: #000000;
+    --secondary-color-2: #17181C;
+    --secondary-color-3: #2E3038;
+    --button-color: #78D253;
+    --text-color: #333;
+    --background-color: #f8f9fa;
+
+    /* Spacing (Margin and padding) */
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --gutter-width: 20px;
+
+    /* Border Radiuses */
+    --border-radius-sm: 5px;
+    --border-radius-md: 10px;
+    --border-radius-lg: 15px;
+    --border-radius-xl: 20px;
+
+    /* Box shadows  */
+    --shadow-light: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0px 3px 6px rgba(0, 0, 0, 0.15);
+    --shadow-heavy: 0px 5px 10px rgba(0, 0, 0, 0.2);
+
+    /* Z-index values  */
+    --z-index-background: 0;
+    --z-index-base: 1;
+    --z-index-dropdown: 1000;
+    --z-index-modal: 2000;
+    --z-index-tooltip: 3000;
+
+    /* Media Query Breakpoints  */
+    --breakpoint-xs: 375px;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+
+    /* Opacity Levels  */
+    --opacity-high: 0.9;
+    --opacity-medium: 0.7;
+    --opacity-low: 0.5;
+
+    /* Grid and layout values  */
+    --grid-columns: 12;
+    --grid-gap: 24px;
+
+    /* Transition and Animation duration  */
+    --transition-fast: 0.2s;
+    --transition-medium: 0.5s;
+    --transition-slow: 1s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    color: #fff;
+    font-size: var(--base-font-size);
+    line-height: var(--line-height);
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    /* max-width: 1400px; */
+    /* width: 1400px; */
+    background-color: #fff;
+    /* overflow-x: auto; */
+
+    /* outline: 1px solid black; */
+}
+
+.container > * {
+    width: 100%;
+    /* align-self: stretch; */
+}
+
+h1 {
+    font: var(--h1-font);
+    padding: var(--spacing-sm);
+}
+
+h2 {
+    font: var(--h2-font);
+}
+
+h3 {
+    font: var(--h3-font);
+}
+
+h4 {
+    font: var(--h4-font);
+}
+
+h5 {
+    font: var(--h5-font);
+}
+
+h6 {
+    font: var(--h6-font);
+}
+
+a {
+    text-decoration: none;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+ul li {
+    list-style: none;
+}
+
+.button {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.button--secondary {
+    background-color: var(--secondary-color);
+}
+
+.card {
+    border-radius: var(--border-radius-md);
+}
+
+.button {
+    border-radius: var(--border-radius-sm);
+}
+
+.modal {
+    border-radius: var(--border-radius-lg);
+    z-index: var(--z-index-modal);
+}
+
+.background {
+    z-index: var(--z-index-background);
+}
+
+.dropdown {
+    z-index: var(--z-index-dropdown);
+}
+
+.tooltip {
+    z-index: var(--z-index-tooltip);
+}
+
+.section {
+    margin: 80px auto 0px auto;
+    max-width: 1440px;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+    /* fill: #3498db; */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+  
+
+/* ************************************************************************* */
+
+
+/* ***************************** THE HEADER ******************************** */
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px ;
+    font: var(--body-font-2);
+}
+
+.head-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.head-wrap-mobile {display: none;}
+
+.head-wrap .logo__wrap, .head-wrap .navbar, .head-wrap .btn__wrap {
+    width: auto;
+    height: auto;
+}
+
+.logo__wrap .mini-logo, .navbar .show-menu { display: none;}
+
+.navbar .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .menu > li {
+    margin: 5px 10px;
+}
+
+.navbar .menu > li > a {
+    color: var(--secondary-color-1);
+    padding: 5px;
+    transition: color var(--transition-fast) ease;
+}
+
+.navbar .menu > li > a:hover {
+    color: var(--primary-color-1);
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu > li > a {
+    display: block;
+    padding: 15px 20px;
+    /* color: white;
+    text-decoration: none; */
+    /* transition: background-color 0.3s ease; */
+}
+
+/* .menu > li > a:hover {
+    background-color: #555;
+} */
+
+/* Dropdown Menu Styling */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+    margin-top: 2px;
+    /* padding-bottom: 10px; */
+    display: none;
+    min-width: 170px;
+    border-radius: 0 0 10px 10px;
+}
+
+.submenu > li > a {
+    display: block;
+    padding: 5px 10px;
+    color: #000;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+/* .submenu > li > a:hover {
+    /* background-color: #555; 
+} */
+
+/* Show Submenu on Hover */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.btn__wrap { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    /* padding: 2px 0;  */
+}
+
+.btn__wrap button.post-btn {
+    font-size: var(--base-font-size);
+    background-color: var(--button-color);
+    color: #fff;
+    border: 0;
+    border-radius: var(--border-radius-sm);
+    padding: 10px 15px;
+    transition: all var(--transition-fast) ease;
+}
+
+.btn__wrap button.post-btn:hover {
+    background-color: var(--accent-color);
+}
+
+.btn__wrap a, .btn__wrap .icon-btn {
+    margin-left: 10px;
+    transition: all var(--transition-fast) ease;
+}
+
+.btn__wrap a {
+    color: var(--secondary-color-1);
+    margin-left: 15px;
+}
+
+.btn__wrap a:hover {
+    color: var(--accent-color);
+}
+
+.icon-btn--heart {
+    border: 0;
+}
+
+.icon-btn--user {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #D0D5DD;
+    padding: 3px 12px;
+    border-radius: var(--border-radius-xl);
+}
+
+.icon-btn--user > span {
+    margin: 3px;
+}
+
+
+
+/* ************************************************************************* */
+
+
+/* ******************************** HERO SECTION ******************************* */
+
+
+
+/* ************************************************************************* */
+
+
+
+
+@media (max-width: var(--breakpoint-xs)) {
+    .container {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: var(--breakpoint-sm)) {
+    .container {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: var(--breakpoint-md)) {
+    .container {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: var(--breakpoint-lg)) {
+    .container {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    
+    .container {
+        margin: 0 auto;
+
+    }
+}
+
+.info-icon {
+    position: fixed;
+    right: 72px;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #78D253;
+    cursor: pointer;
+}
+
+
+/* ***************************** THE FOOTER ******************************** */
+
+footer.main-footer {
+    margin: 0 auto;
+    padding: 135px 135px 90px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--secondary-color-1);
+    border-top: 1px solid #c7c9d1;
+}
+
+.brand-copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 120px;
+}
+
+.brand-copyright .brand-logo {
+    width: 312px;
+    height: 48px;
+    padding: 0;
+}
+
+.brand-copyright .brand-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.brand-copyright .copyright {
+    font: 16px/24px var(--font-family);
+    color: #ABAEBA;
+}
+
+.main-footer .links {
+    display: flex;
+    justify-content: space-between;
+    gap: 42px;
+}
+
+.links .footer-links{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+.links .footer-links a {
+    color: #000000;
+}
+
+.links .footer-links h6 {
+    color: #8f93a3;
+    font-size: 14px;
+}
+
+.links .footer-links > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    color: #8f93a3;
+}
+
+
+
+/* ***************************** OTHER FOOTER ******************************** */
+
+footer.other-footer {
+    margin: 0 auto;
+    padding: 28px 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: 500 14px/16px var(--font-family);
+    color: #162748;
+    border-top: 1px solid #EAECF0;
+}
+
+footer.other-footer div, footer.other-footer div ul {
+    display: flex;
+    align-items: center;
+}
+
+footer.other-footer div:first-child, footer.other-footer div:first-child ul {
+    gap: 16px;
+}
+
+footer.other-footer div:last-child ul {
+    gap: 24px;
+}
+
+footer.other-footer div ul li a {
+    color: #162748;
+    transition: color .2s ease;
+}
+
+footer.other-footer div ul li a:hover {
+    color: #c7c9d1;
+}

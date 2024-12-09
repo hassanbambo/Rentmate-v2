@@ -1,0 +1,95 @@
+section.request-info {
+    margin: 0 auto;
+    padding: 70px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+
+}
+
+section.request-info .wrapper {
+    width: 886px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.bread-crumb ul {
+    display: flex;
+    gap: 10px;
+}
+
+.bread-crumb ul li:first-child, .bread-crumb ul li:first-child span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.bread-crumb ul li, .bread-crumb a {
+    font: 500 14px /24px var(--font-family);
+    color: #18181B;
+}
+
+.request-details {
+    padding: 40px;
+    box-shadow: 1px 4px 2px rgba(0, 0, 0, 0.2), -1px 0px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.request-details h2 {
+    font: 500 36px/24px var(--font-family);
+}
+
+.request-details > div {
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    
+
+    /* outline: 1px solid blue; */
+}
+
+.request-details .details {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.details > div {
+    display: flex;
+    /* gap: 10px; */
+}
+
+.details > div span:first-child {
+    font-weight: bolder;
+    flex: 20%;
+}
+
+.details > div span:last-child {
+    flex: 80%;
+}
+
+.request-details > div .floated {
+    position: absolute;
+    top: 100px;
+    right: 42px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+
+    /* outline: 1px solid black; */
+}
+
+.floated > button {
+    margin-top: 15px;
+    padding: 8px 35px;
+    background-color: #78D253;
+    border-radius: 6px;
+    border: 0;
+    color: #fff;
+    font: 500 14px/20px var(--font-family);
+}

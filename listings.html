@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentmate.ng | Find Properties Near You</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/listings.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="head-wrap">
+                <div class="logo__wrap"><a href="index.html"><img style="max-width: 170px;" src="assets/images/logo.png" alt="Logo"></a></div>
+
+                <nav class="navbar">
+                    <ul class="menu">
+                        <li class="dropdown">
+                            <a href="#">For Sale</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">Land</a></li>
+                                <li><a href="listings.html">House</a></li>
+                                <li><a href="listings.html">Flat & Apartment</a></li>
+                                <li><a href="listings.html">Commercial Property</a></li>
+                                <li><a href="listings.html">All Properties</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">For Rent</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">House</a></li>
+                                <li><a href="listings.html">Office Space</a></li>
+                                <li><a href="listings.html">Land Lease</a></li>
+                                <li><a href="listings.html">Flats & Apartments</a></li>
+                                <li><a href="listings.html">All Properties</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Shortlet</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">Shortlets in Ajah</a></li>
+                                <li><a href="listings.html">Shortlets in Lekki</a></li>
+                                <li><a href="listings.html">All Shortlets</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Flatmates</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">Web Development</a></li>
+                                <li><a href="listings.html">App Development</a></li>
+                                <li><a href="listings.html">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Request</a>
+                            <ul class="submenu">
+                                <li><a href="make-request.html">Post a Request</a></li>
+                                <li><a href="view-all-request.html">All Property Requests</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Agents</a>
+                            <ul class="submenu">
+                                <li><a href="all-agents.html">All Real Estate Agents</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="btn__wrap">
+                    <button class="post-btn">Post Property</button>
+                    <a href="#">Sign Up</a>
+                    <a href="#">Login</a>
+                </div>
+            </div>
+
+            <div class="head-wrap-mobile">
+                <a href="index.html"><img style="max-width: 170px;" src="assets/images/logo.png" alt="Logo"></a>
+                <img src="assets/icons/Hamburger.svg" alt="">
+            </div>
+        </header>
+
+
+
+
+
+        <div class="search-filter">
+            <form class="search-form" id="searchForm">
+                <div class="form-group">    
+                    <input type="text" id="searchQuery" name="searchQuery" placeholder="Enter a Location " required>
+                    <button class="cta-button" type="submit">
+                        <img src="/assets/icons/search.svg" class="search-icon">
+                        <span>Search</span>
+                    </button>
+                </div>
+
+                
+                <button class="filters-overlay" type="button">
+                    <img src="/assets/icons/filters.svg" class="search-icon">
+                    <span>Filters</span>
+                </button>
+            </form>
+        </div>
+
+        <div class="filter-modal" id="filterModal">
+            <h4>Filters</h4>
+            <div class="filter-modal-content">
+                
+
+                <div class="filters">
+
+                    <div class="filter-sets">
+                        <ul>
+                            <li>For Sale</li>
+                            <li>For Rent</li>
+                            <li>Shortlet</li>
+                            <li>Flatmates</li>
+                        </ul>
+
+                        <div class="price-range">
+                            <div>
+                                <label for="minimumPrice">Minimum Price</label>
+                                <select name="minimumPrice" id="minimumPrice">
+                                    <option value="" disabled selected hidden></option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                </select>
+                            </div>
+    
+                            <div>
+                                <label for="maximumPrice">Maximum Price</label>
+                                <select name="maximumPrice" id="maximumPrice">
+                                    <option value="" disabled selected hidden></option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                    <option value="1 million">1 million</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="type">
+                            <h6>Type</h6>
+                            <ul>
+                                <li>All </li>
+                                <li>Duplex</li>
+                                <li>Bungalow</li>
+                                <li>Semi-Detached Bungalow </li>
+                                <li>Warehouse </li>
+                                <li>Mall </li>
+                                <li>Detached Bungalow </li>
+                                <li>Lands</li>
+                                <li>Office Space</li>
+                                <li>Flat & Apartments </li>
+                                <li>Commercial Properties </li>
+                                <li>Shops </li>
+                                <li>Houses</li>
+                                <li>Terrace Duplex</li>
+                                <li>Semi-Detached Duplex </li>
+                                <li>Self Contain </li>
+                                <li>Mini Flats </li>
+                                <li>Co - working Space </li>
+                                <li>Furnished</li>
+                                <li>Terrace Bungalow</li>
+                                <li>Detached Duplex </li>
+                            </ul>
+                        </div>
+
+                        <div class="rooms-bath">
+                            <h6>Rooms & Bathroom</h6>
+    
+                            <div class="bedrooms">
+                                <span>Bedrooms</span>
+                                <ul>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>4+</li>
+                                </ul>
+                            </div>
+    
+                            <div class="bed">
+                                <span>Bed</span>
+                                <ul>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>4+</li>
+                                </ul>
+                            </div>
+    
+                            <div class="bathroom">
+                                <span>Bathroom</span>
+                                <ul>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>4+</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clear-apply">
+                        <button type="reset">Clear all</button>
+                        <button type="button">Apply Filter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+
+        <!-- ALL THE LISTINGS   -->
+
+        <section class="listings-page">
+            <div>
+                <h2>Find Houses in Nigeria </h2>
+            
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-img">
+                            <a href="#"><img src="public/image-2@2x.png" alt=""></a>
+                        </div>
+                        <div class="card-info">
+                            <h6 class="title"><a href="#">4 BedRoom Duplex with BQ</a></h6>
+                            <div class="address">Mile Street Orchid Road Lekki PHASE 1 Lagos Nigeria</div>
+                            <div class="badges"><span>VERIFIED</span><span>RECENTLY POSTED</span></div>
+                            <div class="price-feature">
+                                <div class="price"><span>N4,000,000</span> /Year</div>
+                                <div class="feature">
+                                    <div>
+                                        <img src="public/bed-1.svg" alt="">
+                                        <span>3</span><span>bd</span>
+                                    </div>
+                                    <div>
+                                        <img src="public/bathtub-1.svg" alt="">
+                                        <span>3</span><span>ba</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="love-icon"><img class="love-icon__heart" src="public/shape--heart.svg" alt=""></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <a href="#"><img src="public/image-2@2x.png" alt=""></a>
+                        </div>
+                        <div class="card-info">
+                            <h6 class="title"><a href="#">4 BedRoom Duplex with BQ</a></h6>
+                            <div class="address">Mile Street Orchid Road Lekki PHASE 1 Lagos Nigeria</div>
+                            <div class="badges"><span>VERIFIED</span><span>RECENTLY POSTED</span></div>
+                            <div class="price-feature">
+                                <div class="price"><span>N4,000,000</span> /Year</div>
+                                <div class="feature">
+                                    <div>
+                                        <img src="public/bed-1.svg" alt="">
+                                        <span>3</span><span>bd</span>
+                                    </div>
+                                    <div>
+                                        <img src="public/bathtub-1.svg" alt="">
+                                        <span>3</span><span>ba</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="love-icon"><img class="love-icon__heart" src="public/shape--heart.svg" alt=""></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <a href="#"><img src="public/image-2@2x.png" alt=""></a>
+                        </div>
+                        <div class="card-info">
+                            <h6 class="title"><a href="#">4 BedRoom Duplex with BQ</a></h6>
+                            <div class="address">Mile Street Orchid Road Lekki PHASE 1 Lagos Nigeria</div>
+                            <div class="badges"><span>VERIFIED</span><span>RECENTLY POSTED</span></div>
+                            <div class="price-feature">
+                                <div class="price"><span>N4,000,000</span> /Year</div>
+                                <div class="feature">
+                                    <div>
+                                        <img src="public/bed-1.svg" alt="">
+                                        <span>3</span><span>bd</span>
+                                    </div>
+                                    <div>
+                                        <img src="public/bathtub-1.svg" alt="">
+                                        <span>3</span><span>ba</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="love-icon"><img class="love-icon__heart" src="public/shape--heart.svg" alt=""></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <a href="#"><img src="public/image-2@2x.png" alt=""></a>
+                        </div>
+                        <div class="card-info">
+                            <h6 class="title"><a href="#">4 BedRoom Duplex with BQ</a></h6>
+                            <div class="address">Mile Street Orchid Road Lekki PHASE 1 Lagos Nigeria</div>
+                            <div class="badges"><span>VERIFIED</span><span>RECENTLY POSTED</span></div>
+                            <div class="price-feature">
+                                <div class="price"><span>N4,000,000</span> /Year</div>
+                                <div class="feature">
+                                    <div>
+                                        <img src="public/bed-1.svg" alt="">
+                                        <span>3</span><span>bd</span>
+                                    </div>
+                                    <div>
+                                        <img src="public/bathtub-1.svg" alt="">
+                                        <span>3</span><span>ba</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="love-icon"><img class="love-icon__heart" src="public/shape--heart.svg" alt=""></div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img">
+                            <a href="#"><img src="public/image-2@2x.png" alt=""></a>
+                        </div>
+                        <div class="card-info">
+                            <h6 class="title"><a href="#">4 BedRoom Duplex with BQ</a></h6>
+                            <div class="address">Mile Street Orchid Road Lekki PHASE 1 Lagos Nigeria</div>
+                            <div class="badges"><span>VERIFIED</span><span>RECENTLY POSTED</span></div>
+                            <div class="price-feature">
+                                <div class="price"><span>N4,000,000</span> /Year</div>
+                                <div class="feature">
+                                    <div>
+                                        <img src="public/bed-1.svg" alt="">
+                                        <span>3</span><span>bd</span>
+                                    </div>
+                                    <div>
+                                        <img src="public/bathtub-1.svg" alt="">
+                                        <span>3</span><span>ba</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="love-icon"><img class="love-icon__heart" src="public/shape--heart.svg" alt=""></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <a href="#"><img src="public/image-2@2x.png" alt=""></a>
+                        </div>
+                        <div class="card-info">
+                            <h6 class="title"><a href="#">4 BedRoom Duplex with BQ</a></h6>
+                            <div class="address">Mile Street Orchid Road Lekki PHASE 1 Lagos Nigeria</div>
+                            <div class="badges"><span>VERIFIED</span><span>RECENTLY POSTED</span></div>
+                            <div class="price-feature">
+                                <div class="price"><span>N4,000,000</span> /Year</div>
+                                <div class="feature">
+                                    <div>
+                                        <img src="public/bed-1.svg" alt="">
+                                        <span>3</span><span>bd</span>
+                                    </div>
+                                    <div>
+                                        <img src="public/bathtub-1.svg" alt="">
+                                        <span>3</span><span>ba</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="love-icon"><img class="love-icon__heart" src="public/shape--heart.svg" alt=""></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <a href="#"><img src="public/image-2@2x.png" alt=""></a>
+                        </div>
+                        <div class="card-info">
+                            <h6 class="title"><a href="#">4 BedRoom Duplex with BQ</a></h6>
+                            <div class="address">Mile Street Orchid Road Lekki PHASE 1 Lagos Nigeria</div>
+                            <div class="badges"><span>VERIFIED</span><span>RECENTLY POSTED</span></div>
+                            <div class="price-feature">
+                                <div class="price"><span>N4,000,000</span> /Year</div>
+                                <div class="feature">
+                                    <div>
+                                        <img src="public/bed-1.svg" alt="">
+                                        <span>3</span><span>bd</span>
+                                    </div>
+                                    <div>
+                                        <img src="public/bathtub-1.svg" alt="">
+                                        <span>3</span><span>ba</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="love-icon"><img class="love-icon__heart" src="public/shape--heart.svg" alt=""></div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-img">
+                            <a href="#"><img src="public/image-2@2x.png" alt=""></a>
+                        </div>
+                        <div class="card-info">
+                            <h6 class="title"><a href="#">4 BedRoom Duplex with BQ</a></h6>
+                            <div class="address">Mile Street Orchid Road Lekki PHASE 1 Lagos Nigeria</div>
+                            <div class="badges"><span>VERIFIED</span><span>RECENTLY POSTED</span></div>
+                            <div class="price-feature">
+                                <div class="price"><span>N4,000,000</span> /Year</div>
+                                <div class="feature">
+                                    <div>
+                                        <img src="public/bed-1.svg" alt="">
+                                        <span>3</span><span>bd</span>
+                                    </div>
+                                    <div>
+                                        <img src="public/bathtub-1.svg" alt="">
+                                        <span>3</span><span>ba</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="love-icon"><img class="love-icon__heart" src="public/shape--heart.svg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <br><br><br><br><br><br>
+
+        
+         <!-- THE INFO ICON  -->
+         
+        <div class="info-icon">
+            <img src="public/fisrcommentinfo.svg" alt="">
+        </div>
+         
+        
+
+        <!-- THE FOOTER  -->
+
+        <footer class="other-footer">   
+            <div>
+                <p>© 2024 RENTMATE, Inc.</p>
+                <ul>
+                    <li><a href="">Terms </a></li>
+                    <li><a href="">Privacy </a></li>
+                    <li><a href="">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li><a href="">About Us </a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            
+        </footer>
+        
+
+
+    </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        
+        const filterModal = document.getElementById('filterModal');
+
+        // Gets the filters-overlay button
+        const filters = document.querySelector('.filters-overlay');
+        // Display overlay for Search filters 
+        
+        filters.onclick = function() {
+            filterModal.style.display = 'block';
+        }
+
+    });
+
+</script>
+
+</body>
+</html>

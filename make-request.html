@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentmate.ng | Find Properties Near You</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/make-request.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="head-wrap">
+                <div class="logo__wrap"><a href="index.html"><img style="max-width: 170px;" src="assets/images/logo.png" alt="Logo"></a></div>
+                <nav class="navbar">
+                    <ul class="menu">
+                        <li class="dropdown">
+                            <a href="#">For Sale</a>
+                            <ul class="submenu">
+                                <li><a href="#">Web Development</a></li>
+                                <li><a href="#">App Development</a></li>
+                                <li><a href="#">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">For Rent</a>
+                            <ul class="submenu">
+                                <li><a href="#">Web Development</a></li>
+                                <li><a href="#">App Development</a></li>
+                                <li><a href="#">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Shortlet</a>
+                            <ul class="submenu">
+                                <li><a href="#">Web Development</a></li>
+                                <li><a href="#">App Development</a></li>
+                                <li><a href="#">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Flatmates</a>
+                            <ul class="submenu">
+                                <li><a href="#">Web Development</a></li>
+                                <li><a href="#">App Development</a></li>
+                                <li><a href="#">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Request</a></li>
+                        <li><a href="#">Agents</a></li>
+                    </ul>
+                </nav>
+                <div class="btn__wrap">
+                    <button class="post-btn">Post Property</button>
+                    <a href="#">Sign Up</a>
+                    <a href="#">Login</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- THE REQUEST SECTION  -->
+
+        <section class="request-section">
+            <div class="make-request">
+                <div class="tracker">
+                    <hr class="lit">
+                    <hr>
+                </div>
+
+                <div class="header">
+                    <h2>Make a Property Request</h2>
+                    <p>You can't find your property listed? Send a request to an agent.</p>
+                </div>
+
+                <form class="request-form" id="requestForm" name="requestForm">
+
+                    <!-- FIRST PART OF THE REQUEST FORM  -->
+
+                    <div class="part-1">
+                        <div class="form-group">
+                            <div>
+                                <label for="category">Category</label>
+                                <select name="category" id="category">
+                                    <option value="" disabled selected hidden>Select Category</option>
+                                    <option value="">Duplex</option>
+                                    <option value="">Duplex</option>
+                                    <option value="">Duplex</option>
+                                    <option value="">Duplex</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="location">Location</label>
+                                <select name="location" id="location">
+                                    <option value="" disabled selected hidden>Location</option>
+                                    <option value="">Ibeju Lekki</option>
+                                    <option value="">Ibeju Lekki</option>
+                                    <option value="">Ibeju Lekki</option>
+                                    <option value="">Ibeju Lekki</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div>
+                                <label for="type">Type</label>
+                                <select name="type" id="type">
+                                    <!-- <option value="" disabled selected hidden>Select Type</option> -->
+                                    <option value="" hidden>Type</option>
+                                    <option value="fruit">Fruit</option>
+                                    <option value="animal">Animal</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="subtype">Subtype</label>
+                                <select name="subtype" id="subtype">
+                                    <option value="">Subtype</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div>
+                                <label for="bedrooms">Bedrooms</label>
+                                <select name="bedrooms" id="bedrooms">
+                                    <option value="" disabled selected hidden>Bedrooms</option>
+                                    <option value="">Duplex</option>
+                                    <option value="">Duplex</option>
+                                    <option value="">Duplex</option>
+                                    <option value="">Duplex</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="budget">Budget</label>
+                                <input type="text" name="budget" id="budget">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- THE SECOND PART -->
+                    <div class="part-2">
+
+                        <div class="form-group">
+                            <div>
+                                <label for="name">Name</label>
+                                <div>
+                                    <img src="assets/icons/user-name.svg" alt="">
+                                    <input type="text" name="name" id="name">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="phone">Phone Number</label>
+                                <div>
+                                    <span class="tel-code">+234</span>
+                                    <input type="text" name="phone" id="phone">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div>
+                                <label for="email">Email</label>
+                                <div>
+                                    <img src="assets/icons/email-icon.svg" alt="">
+                                    <input type="text" name="email" id="email">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="agent">I am a/an...</label>
+                                <select name="agent" id="agent">
+                                    <option value="">Agent </option>
+                                    <option value="">Agent Y</option>
+                                    <option value="">Agent Z</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    
+                    <p class="error-msg"></p>
+
+                    <textarea name="" id="" rows="4" placeholder="Add a comment"></textarea>
+
+                </form>
+
+                <div class="buttons">
+                    <button class="next">Next</button>
+                    <button type="submit" class="post" >Post a Request</button>
+                </div>
+            </div>
+
+            <div class="illustration">
+                <div class="img-holder"><img src="assets/images/Mask-group.png" alt=""></div>
+            </div>
+        </section>
+
+
+        <!-- F.A.Q.  -->
+
+        <section class="faq">
+            <div class="faq-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Your Questions Answered</p>
+            </div>
+
+            <div class="faq-list">
+                <details class="the-faqs">
+                    <summary>What makes RentMate different from other agency platforms in Nigeria ?</summary>
+                    <p>Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text</p>
+                </details>
+                <details class="the-faqs">
+                    <summary>How do we book for inspections ?</summary>
+                    <p>Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text</p>
+                </details>
+                <details class="the-faqs">
+                    <summary>Is the subscription Free?</summary>
+                    <p>Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text</p>
+                </details>
+                <details class="the-faqs">
+                    <summary>How can Rentmate sell my property ?</summary>
+                    <p>Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text</p>
+                </details>
+                <details class="the-faqs">
+                    <summary>What is the difference between Verified and Executive Listings ?</summary>
+                    <p>Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- THE FOOTER  -->
+
+        <footer class="other-footer">   
+            <div>
+                <p>© 2024 RENTMATE, Inc.</p>
+                <ul>
+                    <li><a href="">Terms </a></li>
+                    <li><a href="">Privacy </a></li>
+                    <li><a href="">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li><a href="">About Us </a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            
+        </footer>
+        
+
+
+    </div>
+
+    <script type="module" src="src/js/type-subtype.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const formPart1 = document.querySelector(".request-form .part-1");
+            const formPart2 = document.querySelector(".request-form .part-2");
+            const nextBtn = document.querySelector(".buttons .next");
+            const postBtn = document.querySelector(".buttons .post");
+            const tracker = document.querySelector(".tracker hr:last-child");
+
+            nextBtn.onclick = function() {
+                if (nextBtn.innerHTML === "Next") {
+                    formPart1.style.display = "none";
+
+                    formPart2.style.display = "flex";
+                    formPart2.style.flexDirection = "column";
+                    formPart2.style.gap = "10px";
+
+                    nextBtn.innerHTML = "Back";
+                    nextBtn.style.color = "#000";
+                    nextBtn.style.border = "1px solid #D0D5DD";
+                    nextBtn.style.backgroundColor = "#fff";
+
+                    tracker.classList.add("lit");
+
+                    // postBtn.removeAttribute('disabled');
+                    // postBtn.disabled=false;
+                    postBtn.style.backgroundColor = "#78D253";
+                    postBtn.style.color = "#fff";
+
+                } else if (nextBtn.innerHTML === "Back") {
+                    formPart2.style.display = "none";
+
+                    formPart1.style.display = "flex";
+
+                    nextBtn.innerHTML = "Next";
+                    nextBtn.style.color = "#fff";
+                    nextBtn.style.border = "none";
+                    nextBtn.style.backgroundColor = "#78D253";
+
+                    tracker.classList.remove("lit");
+
+                    // postBtn.disabled=true;
+                    postBtn.style.backgroundColor = "#fff";
+                    postBtn.style.color = "#000";
+                }
+            };
+
+        });
+
+    </script>
+</body>
+</html>

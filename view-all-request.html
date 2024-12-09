@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentmate.ng | Find Properties Near You</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/make-request.css">
+    <link rel="stylesheet" href="src/css/view-all-request.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="head-wrap">
+                <div class="logo__wrap"><a href="index.html"><img style="max-width: 170px;" src="assets/images/logo.png" alt="Logo"></a></div>
+                <nav class="navbar">
+                    <ul class="menu">
+                        <li class="dropdown">
+                            <a href="#">For Sale</a>
+                            <ul class="submenu">
+                                <li><a href="#">Web Development</a></li>
+                                <li><a href="#">App Development</a></li>
+                                <li><a href="#">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">For Rent</a>
+                            <ul class="submenu">
+                                <li><a href="#">Web Development</a></li>
+                                <li><a href="#">App Development</a></li>
+                                <li><a href="#">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Shortlet</a>
+                            <ul class="submenu">
+                                <li><a href="#">Web Development</a></li>
+                                <li><a href="#">App Development</a></li>
+                                <li><a href="#">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Flatmates</a>
+                            <ul class="submenu">
+                                <li><a href="#">Web Development</a></li>
+                                <li><a href="#">App Development</a></li>
+                                <li><a href="#">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Request</a></li>
+                        <li><a href="#">Agents</a></li>
+                    </ul>
+                </nav>
+                <div class="btn__wrap">
+                    <button class="post-btn">Post Property</button>
+                    <a href="#">Sign Up</a>
+                    <a href="#">Login</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- REQUEST FILTERS   -->
+
+        <section class="filter-request">
+            <div>
+                <div class="header">
+                    <h2>View All Property Requests</h2>
+                </div>
+    
+                <form action="" class="filter-by">
+                    <div class="form-group">
+                        <div>
+                            <label for="category">Category</label>
+                            <select name="category" id="category">
+                                <option value="" disabled selected hidden>Select Category</option>
+                                <option value="">Duplex</option>
+                                <option value="">Duplex</option>
+                                <option value="">Duplex</option>
+                                <option value="">Duplex</option>
+                            </select>
+                        </div>
+    
+                        <div>
+                            <label for="location">Location</label>
+                            <select name="location" id="location">
+                                <option value="" disabled selected hidden>Location</option>
+                                <option value="">Ibeju Lekki</option>
+                                <option value="">Ibeju Lekki</option>
+                                <option value="">Ibeju Lekki</option>
+                                <option value="">Ibeju Lekki</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <div>
+                            <label for="type">Type</label>
+                            <select name="type" id="type">
+                                <!-- <option value="" disabled selected hidden>Select Type</option> -->
+                                <option value="" hidden>Type</option>
+                                <option value="fruit">Fruit</option>
+                                <option value="animal">Animal</option>
+                            </select>
+                        </div>
+    
+                        <div>
+                            <label for="subtype">Subtype</label>
+                            <select name="subtype" id="subtype">
+                                <option value="">Subtype</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <div>
+                            <label for="bedrooms">Bedrooms</label>
+                            <select name="bedrooms" id="bedrooms">
+                                <option value="" disabled selected hidden>Bedrooms</option>
+                                <option value="">Duplex</option>
+                                <option value="">Duplex</option>
+                                <option value="">Duplex</option>
+                                <option value="">Duplex</option>
+                            </select>
+                        </div>
+    
+                        <div>
+                            <label for="requester">Requester Types</label>
+                            <select name="requester" id="requester">
+                                <option value="" disabled selected hidden>Requester Types</option>
+                                <option value="">Duplex</option>
+                                <option value="">Duplex</option>
+                                <option value="">Duplex</option>
+                                <option value="">Duplex</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>   
+                
+                <div class="filter-btn"><button>Filter</button></div>
+            </div>
+        </section>
+         
+
+
+        
+        <!-- THE REQUEST AREA  -->
+
+        <section class="filtered-requests">
+            <div class="request-grid">
+                <div class="request-card">
+                    <div>
+                        <div class="title">
+                            <h4>6 Bedroom Duplex</h4>
+                            <button class="icon"><img src="assets/icons/faded-heart.svg" alt=""></button>
+                        </div>
+                        <div class="details">
+                            <div>
+                                <div class="category"><span>Category : </span> <span>For Sale</span></div> 
+                                <div class="bedroom"><span>Bedroom :</span> <span>6</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Location : </span> <span>Lekki</span></div> 
+                                <div class="bedroom"><span>Subtype :</span> <span>Detached Duplex</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Type : </span> <span>House</span></div> 
+                                <div class="bedroom"><span>Requester Type :</span> <span>Individual</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Date : </span> <span>20th July, 2025</span></div> 
+                                <div class="bedroom"><span>Budget :</span> <span>170,000,000</span></div>
+                            </div>
+                        </div>
+
+                        <div class="more-info"><a href="request-info.html">More Info</a></div>
+                    </div>
+                </div>
+
+                <div class="request-card">
+                    <div>
+                        <div class="title">
+                            <h4>6 Bedroom Duplex</h4>
+                            <button class="icon"><img src="assets/icons/faded-heart.svg" alt=""></button>
+                        </div>
+                        <div class="details">
+                            <div>
+                                <div class="category"><span>Category : </span> <span>For Sale</span></div> 
+                                <div class="bedroom"><span>Bedroom :</span> <span>6</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Location : </span> <span>Lekki</span></div> 
+                                <div class="bedroom"><span>Subtype :</span> <span>Detached Duplex</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Type : </span> <span>House</span></div> 
+                                <div class="bedroom"><span>Requester Type :</span> <span>Individual</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Date : </span> <span>20th July, 2025</span></div> 
+                                <div class="bedroom"><span>Budget :</span> <span>170,000,000</span></div>
+                            </div>
+                        </div>
+
+                        <div class="more-info"><a href="request-info.html">More Info</a></div>
+                    </div>
+                </div>
+
+                <div class="request-card">
+                    <div>
+                        <div class="title">
+                            <h4>6 Bedroom Duplex</h4>
+                            <button class="icon"><img src="assets/icons/faded-heart.svg" alt=""></button>
+                        </div>
+                        <div class="details">
+                            <div>
+                                <div class="category"><span>Category : </span> <span>For Sale</span></div> 
+                                <div class="bedroom"><span>Bedroom :</span> <span>6</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Location : </span> <span>Lekki</span></div> 
+                                <div class="bedroom"><span>Subtype :</span> <span>Detached Duplex</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Type : </span> <span>House</span></div> 
+                                <div class="bedroom"><span>Requester Type :</span> <span>Individual</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Date : </span> <span>20th July, 2025</span></div> 
+                                <div class="bedroom"><span>Budget :</span> <span>170,000,000</span></div>
+                            </div>
+                        </div>
+
+                        <div class="more-info"><a href="request-info.html">More Info</a></div>
+                    </div>
+                </div>
+
+                <div class="request-card">
+                    <div>
+                        <div class="title">
+                            <h4>6 Bedroom Duplex</h4>
+                            <button class="icon"><img src="assets/icons/faded-heart.svg" alt=""></button>
+                        </div>
+                        <div class="details">
+                            <div>
+                                <div class="category"><span>Category : </span> <span>For Sale</span></div> 
+                                <div class="bedroom"><span>Bedroom :</span> <span>6</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Location : </span> <span>Lekki</span></div> 
+                                <div class="bedroom"><span>Subtype :</span> <span>Detached Duplex</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Type : </span> <span>House</span></div> 
+                                <div class="bedroom"><span>Requester Type :</span> <span>Individual</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Date : </span> <span>20th July, 2025</span></div> 
+                                <div class="bedroom"><span>Budget :</span> <span>170,000,000</span></div>
+                            </div>
+                        </div>
+
+                        <div class="more-info"><a href="request-info.html">More Info</a></div>
+                    </div>
+                </div>
+
+                <div class="request-card">
+                    <div>
+                        <div class="title">
+                            <h4>6 Bedroom Duplex</h4>
+                            <button class="icon"><img src="assets/icons/faded-heart.svg" alt=""></button>
+                        </div>
+                        <div class="details">
+                            <div>
+                                <div class="category"><span>Category : </span> <span>For Sale</span></div> 
+                                <div class="bedroom"><span>Bedroom :</span> <span>6</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Location : </span> <span>Lekki</span></div> 
+                                <div class="bedroom"><span>Subtype :</span> <span>Detached Duplex</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Type : </span> <span>House</span></div> 
+                                <div class="bedroom"><span>Requester Type :</span> <span>Individual</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Date : </span> <span>20th July, 2025</span></div> 
+                                <div class="bedroom"><span>Budget :</span> <span>170,000,000</span></div>
+                            </div>
+                        </div>
+
+                        <div class="more-info"><a href="request-info.html">More Info</a></div>
+                    </div>
+                </div>
+
+                <div class="request-card">
+                    <div>
+                        <div class="title">
+                            <h4>6 Bedroom Duplex</h4>
+                            <button class="icon"><img src="assets/icons/faded-heart.svg" alt=""></button>
+                        </div>
+                        <div class="details">
+                            <div>
+                                <div class="category"><span>Category : </span> <span>For Sale</span></div> 
+                                <div class="bedroom"><span>Bedroom :</span> <span>6</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Location : </span> <span>Lekki</span></div> 
+                                <div class="bedroom"><span>Subtype :</span> <span>Detached Duplex</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Type : </span> <span>House</span></div> 
+                                <div class="bedroom"><span>Requester Type :</span> <span>Individual</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Date : </span> <span>20th July, 2025</span></div> 
+                                <div class="bedroom"><span>Budget :</span> <span>170,000,000</span></div>
+                            </div>
+                        </div>
+
+                        <div class="more-info"><a href="request-info.html">More Info</a></div>
+                    </div>
+                </div>
+
+                <div class="request-card">
+                    <div>
+                        <div class="title">
+                            <h4>6 Bedroom Duplex</h4>
+                            <button class="icon"><img src="assets/icons/faded-heart.svg" alt=""></button>
+                        </div>
+                        <div class="details">
+                            <div>
+                                <div class="category"><span>Category : </span> <span>For Sale</span></div> 
+                                <div class="bedroom"><span>Bedroom :</span> <span>6</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Location : </span> <span>Lekki</span></div> 
+                                <div class="bedroom"><span>Subtype :</span> <span>Detached Duplex</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Type : </span> <span>House</span></div> 
+                                <div class="bedroom"><span>Requester Type :</span> <span>Individual</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Date : </span> <span>20th July, 2025</span></div> 
+                                <div class="bedroom"><span>Budget :</span> <span>170,000,000</span></div>
+                            </div>
+                        </div>
+
+                        <div class="more-info"><a href="request-info.html">More Info</a></div>
+                    </div>
+                </div>
+                
+                <div class="request-card">
+                    <div>
+                        <div class="title">
+                            <h4>6 Bedroom Duplex</h4>
+                            <button class="icon"><img src="assets/icons/faded-heart.svg" alt=""></button>
+                        </div>
+                        <div class="details">
+                            <div>
+                                <div class="category"><span>Category : </span> <span>For Sale</span></div> 
+                                <div class="bedroom"><span>Bedroom :</span> <span>6</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Location : </span> <span>Lekki</span></div> 
+                                <div class="bedroom"><span>Subtype :</span> <span>Detached Duplex</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Type : </span> <span>House</span></div> 
+                                <div class="bedroom"><span>Requester Type :</span> <span>Individual</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Date : </span> <span>20th July, 2025</span></div> 
+                                <div class="bedroom"><span>Budget :</span> <span>170,000,000</span></div>
+                            </div>
+                        </div>
+
+                        <div class="more-info"><a href="request-info.html">More Info</a></div>
+                    </div>
+                </div>
+
+                <div class="request-card">
+                    <div>
+                        <div class="title">
+                            <h4>6 Bedroom Duplex</h4>
+                            <button class="icon"><img src="assets/icons/faded-heart.svg" alt=""></button>
+                        </div>
+                        <div class="details">
+                            <div>
+                                <div class="category"><span>Category : </span> <span>For Sale</span></div> 
+                                <div class="bedroom"><span>Bedroom :</span> <span>6</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Location : </span> <span>Lekki</span></div> 
+                                <div class="bedroom"><span>Subtype :</span> <span>Detached Duplex</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Type : </span> <span>House</span></div> 
+                                <div class="bedroom"><span>Requester Type :</span> <span>Individual</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Date : </span> <span>20th July, 2025</span></div> 
+                                <div class="bedroom"><span>Budget :</span> <span>170,000,000</span></div>
+                            </div>
+                        </div>
+
+                        <div class="more-info"><a href="request-info.html">More Info</a></div>
+                    </div>
+                </div>
+    
+                <div class="request-card">
+                    <div>
+                        <div class="title">
+                            <h4>6 Bedroom Duplex</h4>
+                            <button class="icon"><img src="assets/icons/faded-heart.svg" alt=""></button>
+                        </div>
+                        <div class="details">
+                            <div>
+                                <div class="category"><span>Category : </span> <span>For Sale</span></div> 
+                                <div class="bedroom"><span>Bedroom :</span> <span>6</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Location : </span> <span>Lekki</span></div> 
+                                <div class="bedroom"><span>Subtype :</span> <span>Detached Duplex</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Type : </span> <span>House</span></div> 
+                                <div class="bedroom"><span>Requester Type :</span> <span>Individual</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Date : </span> <span>20th July, 2025</span></div> 
+                                <div class="bedroom"><span>Budget :</span> <span>170,000,000</span></div>
+                            </div>
+                        </div>
+
+                        <div class="more-info"><a href="request-info.html">More Info</a></div>
+                    </div>
+                </div>
+
+                <div class="request-card">
+                    <div>
+                        <div class="title">
+                            <h4>6 Bedroom Duplex</h4>
+                            <button class="icon"><img src="assets/icons/faded-heart.svg" alt=""></button>
+                        </div>
+                        <div class="details">
+                            <div>
+                                <div class="category"><span>Category : </span> <span>For Sale</span></div> 
+                                <div class="bedroom"><span>Bedroom :</span> <span>6</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Location : </span> <span>Lekki</span></div> 
+                                <div class="bedroom"><span>Subtype :</span> <span>Detached Duplex</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Type : </span> <span>House</span></div> 
+                                <div class="bedroom"><span>Requester Type :</span> <span>Individual</span></div>
+                            </div>
+
+                            <div>
+                                <div class="category"><span>Date : </span> <span>20th July, 2025</span></div> 
+                                <div class="bedroom"><span>Budget :</span> <span>170,000,000</span></div>
+                            </div>
+                        </div>
+
+                        <div class="more-info"><a href="request-info.html">More Info</a></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <br><br><br><br><br>
+
+        <!-- THE FOOTER  -->
+
+        <footer class="other-footer">   
+            <div>
+                <p>© 2024 RENTMATE, Inc.</p>
+                <ul>
+                    <li><a href="">Terms </a></li>
+                    <li><a href="">Privacy </a></li>
+                    <li><a href="">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li><a href="">About Us </a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            
+        </footer>
+
+
+    </div>
+
+    <script>
+    </script>
+</body>
+</html>

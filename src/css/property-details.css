@@ -1,0 +1,968 @@
+.back-btn {
+    margin: 0 auto ;
+    width: 100%;
+    height: auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+
+.back-btn a {
+    margin-left: 40px;
+    padding: 15px 5px;
+    color: #333;
+    font-family: inherit;
+    border-radius: 5px;
+    font-size: 14px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 1px 2px 3px rgba(0 , 0, 0 , 0.2);
+}
+
+h1, h3, h4 {
+    font-weight: 600;
+}
+
+section.listing-area {
+    align-self: stretch;
+    margin: 0 auto;
+    max-width: 100%;
+    /* margin: 20px auto; */
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    padding: 50px 60px;
+    color: #000;
+}
+
+.listing-area .listing-details {
+    flex: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.listing-area .listing-side {
+    flex: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.listing-info-mobile {
+    display: none;
+    /* flex-direction: column;
+    align-items: flex-start; */
+}
+
+.listing-details .listing-gallery {
+    margin: 0;
+    display: grid;
+    width: 100%;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 250px 250px; 
+    overflow: hidden;
+    height: 520px;
+    /* max-height: 520px; */
+}
+
+.listing-gallery img {
+    height: 100%;
+}
+
+.listing-gallery div.shown {
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    /* position: relative; */
+}
+
+.listing-gallery div.shown:nth-child(3) {
+    position: relative;
+}
+
+.listing-gallery span.remaining-img {
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    font-size: 40px ;
+    color: #fff;
+    z-index: 100;
+}
+
+.listing-gallery div.shown:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* width: 0%;
+    height: 0%;
+    background-color: rgba(0, 0, 0, 0.1); */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+/* .listing-gallery div.shown:hover::before {
+    
+} */
+
+
+.listing-gallery div.shown:nth-child(1) {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    border-radius: 10px 0 0 10px;
+}
+.listing-gallery div.shown:nth-child(2) {
+    grid-column: 4/6;
+    grid-row: 1;
+    border-radius: 0 10px 10px 0;
+}
+.listing-gallery div.shown:nth-child(3) {
+    grid-column: 4/6;
+    grid-row: 2;
+    border-radius: 0 10px 10px 0;
+}
+
+.listing-gallery div.hidden {
+    display: none;
+}
+
+
+/* ************************* THE MODAL STYLE *********************************  */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    /* overflow: auto; */
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    position: relative;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: auto;
+    width: 90%;
+    /* height: 90%; */
+    height: 100vh;
+    max-width: 1100px;
+    max-height: 520px;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #000;
+    font-size: 34px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.modal-content .close:hover,
+.modal-content .close:focus {
+    color: #ccc;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content .slider {
+    margin: 10px auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider .slides {
+    /* max-width: 800; */
+    flex: 80%;
+    align-self: stretch;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slides img {
+    max-height: 480px;
+    height: 100%;
+    width: 100%;
+    max-width: 900px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+.prev,
+.next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 28px;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* ****************************************************************************** */
+
+.listing-title-desktop {
+    align-self: flex-start;
+    margin-top: 30px;    
+}
+
+.listing-title-desktop h1 {
+    padding: 10px;
+    font: 600 32px/40px var(--font-family);
+}
+
+.listing-title-desktop > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin: 10px auto;
+    padding: 0 10px;
+    font: 500 14px/16px var(--font-family);
+    color: #162748;
+}
+
+.listing-title-desktop > div >span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.property-description {
+    align-self: flex-start;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.inspection-amenities {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.inspection-additional {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.property-description h4, .inspection-additional h5, .amenities h5 {
+    color: #1D2939;
+    font: 600 18px/28px var(--font-family);
+    padding: 5px 0;
+    margin: 10px 0;
+}
+
+.property-description p {
+    color: #475467;
+    font: 500 14px/22px var(--font-family);
+}
+
+.inspection p, .additional p {
+    color: #000;
+    font: 500 14px/22px var(--font-family);
+}
+
+.amenities>div {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 8px;
+    max-width: 498px;
+}
+
+.amenities>div>div {
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font: 16px/24px var(--font-family);
+}
+
+
+/* ************************************ THE LISTING SIDE *************************************** */
+
+.listing-side > * {
+    box-shadow: 0px 4px 11px rgba(22, 39, 72, 0.13);;
+    border-radius: 8px;
+    /* border: 1px solid #eaecf0; */
+    border: 1px solid #ccc;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 24px;
+    min-height: 414px;
+}
+
+.listing-side .hidden-overlay { display: none;}
+
+
+.listing-side .listing-info, .listing-side .posted-by {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.posted-by .poster {
+    display: flex;
+    gap: 10px;
+    background-color: rgba(197, 197, 197, 0.09);
+}
+
+.poster img {
+    height: 40px;
+    width: 40px;
+}
+
+.poster > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.poster > div span:first-child {
+    color: #919396;
+    font: 600 10px/16px var(--font-family);
+}
+
+.poster > div span:last-child {
+    color: #162748;
+    font: 600 14px/16px var(--font-family);
+}
+
+.listing-side .share-property {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.share-property p {
+    font: 600 18px/24px var(--font-family);
+    color: #1D2939;
+}
+
+.share-property > div {
+    display: flex;
+    gap: 15px;
+}
+
+.share-property > div > span {
+    width: 48px;
+    border-radius: 8px;
+    border: 1px solid #eaecf0;
+    display: flex;
+    align-items: center;
+    padding: 6px 15px;
+}
+
+.share-property > div > span img {
+    height: 16px;
+    width: 16px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+
+.listing-info .property-price {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    
+}
+
+.property-price .price {
+    color: #031C43;
+    font: 600 24px/32px var(--font-family);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.property-price .rate {
+    color: #162748;
+    font: 500 14px/24px var(--font-family);
+    margin-left: 5px;
+}
+
+.property-price button {
+    border: 1px solid rgba(137, 143, 134, 0.37);
+    border-radius: 10px;
+    padding: 13px 20px;
+    font: 14px/16px var(--font-family);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.property-price button:nth-child(2) {
+    color: #322744;
+    background-color: #fff;
+}
+
+.property-price button:nth-child(2):hover {
+    background-color: #c5c2c2;
+}
+
+.property-price button:last-child {
+    border: 0;
+    /* padding: 15px 78px; */
+    background-color: #78d253;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #fff;
+    /* white-space: nowrap; */
+}
+
+.property-price button:last-child:hover {
+    background-color: var(--accent-color);
+}
+
+.listing-side .tips {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.tips h6 {
+    align-self: center;
+    font: 600 18px/28px var(--font-family);
+}
+
+.tips > ul { padding-left: 19px;}
+
+.tips > ul > li {
+    list-style-type: inherit;
+    color: #162748;
+    font: 14px/24px var(--font-family);
+}
+
+.tips button {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 13px 20px;
+    font: 14px/16px var(--font-family);
+    transition: all .2s ease-out;
+}
+
+.tips button:hover {
+    color: #fff;
+    background-color: orangered;
+    border: 0;
+}
+
+section.map-api {
+    margin: 0 auto;
+    padding: 80px;
+
+
+    /* outline: 1px solid black; */
+}
+
+.map-api .map {
+    width: 100%;
+    height: 530px;
+}
+
+section.similar-properties {
+    margin: 0 auto;
+    padding: 0 72px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #000;
+}
+
+/* section.similar-properties>* {outline: 1px solid black;} */
+
+.similar-listings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.similar-listings h5 {
+    font: 600 18px/28px var(--font-family);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *************************************************************************************
+
+                        MEDIUM SCREEN STYLES 
+                        
+************************************************************************************** */
+
+@media screen and (max-width: 1230px) {
+    
+    .back-btn a {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    
+    section.listing-area {
+        margin: 0 auto;
+        padding: 20px;
+        flex-direction: column;
+    }
+    
+    .listing-area .listing-details {
+        flex: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .listing-area .listing-side {
+        flex: 25%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .listing-info-mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .listing-info-mobile .title {
+        font: 500 28px/36px var(--font-family);
+    }
+
+    .listing-info-mobile .poster, .listing-info-mobile .location, .share-like > span {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        font: 500 14px/18px var(--font-family);
+    }
+
+    .share-like {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .share-like > span {
+        justify-content: center;
+        border: 1px solid #EAECF0;
+        border-radius: 8px;
+        width: 100px;
+        padding: 15px 20px;
+        margin: 20px 0;
+    }
+    
+    /* ************************* THE MODAL STYLE *********************************  */
+    
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        /* overflow: auto; */
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .modal-content {
+        margin: 0px auto;
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+    }
+    
+    .modal-content .slider {
+        margin: 0px auto;
+        width: 100%;
+    }
+    
+    .slides img {
+        height: 100%;
+        max-height: 100vh;
+        width: 100%;
+        max-width: 900px;
+    }
+    
+    /* ****************************************************************************** */
+    
+    .listing-title-desktop {
+        display: none;   
+    }
+    
+    .inspection-amenities {
+        flex-direction: column-reverse;
+    }
+    
+    /* ************************************ THE LISTING SIDE *************************************** */
+    
+    .listing-side > * {
+        box-shadow: 0px 4px 11px rgba(22, 39, 72, 0.13);;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        overflow: hidden;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+        gap: 24px;
+        min-height: auto;
+    }
+    
+    .listing-side .posted-by { display: none;}
+    
+    .listing-side .listing-info{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 0;
+        margin: 15px 0;
+        border: 0;
+    }
+    
+    section.map-api {
+        margin: 10px auto ;
+        padding: 20px;
+        max-height: 380px;
+    }
+    
+    .map-api .map {
+        width: 100%;
+        /* height: auto; */
+    }
+
+    .amenities>div {
+        min-width: 100%;
+    }
+    
+    .amenities>div>div {
+        width: 30%;
+        padding: 10px;
+        font: 14px/22px var(--font-family);
+        min-width: 100px;
+    }
+    
+    section.similar-properties {
+        margin: 65px;
+        padding: 30px 20px;
+        /* justify-content: flex-start;
+        align-items: flex-start; */
+    }
+    
+    .similar-listings {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 25px;
+        width: 100%;
+        overflow-x: scroll;
+    }
+    
+    .similar-listings h5 {
+        font: 500 26px/28px var(--font-family);
+        align-self: center;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *************************************************************************************
+
+                        MOBILE SCREEN STYLES 
+                        
+************************************************************************************** */
+
+@media screen and (max-width: 600px) {
+    
+    .back-btn a {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    
+    section.listing-area {
+        margin: 0 auto;
+        padding: 20px;
+        flex-direction: column;
+    }
+    
+    .listing-area .listing-details {
+        flex: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .listing-area .listing-side {
+        flex: 25%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .listing-info-mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .listing-info-mobile .title {
+        font: 500 18px/24px var(--font-family);
+    }
+
+    .listing-info-mobile .poster, .listing-info-mobile .location, .share-like > span {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        font: 500 14px/18px var(--font-family);
+    }
+
+    .share-like {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .share-like > span {
+        justify-content: center;
+        border: 1px solid #EAECF0;
+        border-radius: 8px;
+        width: 100px;
+        padding: 15px 20px;
+        margin: 20px 0;
+    }
+    
+    .listing-details .listing-gallery {
+        margin: 10px auto;
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        overflow-x: scroll;
+        height: 270px;
+        min-height: 270px;
+        scrollbar-width: none;
+    }
+
+    .listing-details .listing-gallery::-webkit-scrollbar {
+        display: none;
+    }
+
+    .listing-gallery div.shown {
+        /* width: 308px; */
+        flex: 1;
+        min-width: 80%;
+    }
+    
+    .listing-gallery div.shown:nth-child(2) {
+        border-radius: 0;
+    }
+    
+    
+    /* ************************* THE MODAL STYLE *********************************  */
+    
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        /* overflow: auto; */
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .modal-content {
+        margin: 0px auto;
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+    }
+    
+    .modal-content .slider {
+        margin: 0px auto;
+        width: 100%;
+    }
+    
+    .slides img {
+        height: 100%;
+        max-height: 100vh;
+        width: 100%;
+        max-width: 900px;
+    }
+    
+    /* ****************************************************************************** */
+    
+    .listing-title-desktop {
+        display: none;   
+    }
+    
+    .inspection-amenities {
+        flex-direction: column-reverse;
+    }
+    
+    /* ************************************ THE LISTING SIDE *************************************** */
+    
+    .listing-side > * {
+        box-shadow: 0px 4px 11px rgba(22, 39, 72, 0.13);;
+        border-radius: 8px;
+        /* border: 1px solid #eaecf0; */
+        border: 1px solid #ccc;
+        overflow: hidden;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+        gap: 24px;
+        min-height: auto;
+    }
+    
+    .listing-side .posted-by { display: none;}
+    
+    .listing-side .listing-info{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 0;
+        margin: 15px 0;
+        border: 0;
+    }
+    
+    section.map-api {
+        margin: 0 auto;
+        padding: 20px;
+        max-height: 380px;
+    }
+    
+    .map-api .map {
+        width: 100%;
+        /* height: auto; */
+    }
+
+    .amenities>div {
+        min-width: 100%;
+    }
+    
+    .amenities>div>div {
+        width: 30%;
+        padding: 10px;
+        font: 14px/22px var(--font-family);
+        min-width: 100px;
+    }
+    
+    section.similar-properties {
+        padding: 30px 20px;
+        justify-content: center;
+    }
+    
+    .similar-listings {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+    }
+    
+    .similar-listings h5 {
+        font: 500 26px/28px var(--font-family);
+    }
+    
+    .card-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+
+}

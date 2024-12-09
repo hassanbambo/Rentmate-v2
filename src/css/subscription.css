@@ -1,0 +1,93 @@
+.subscription {
+    margin-top: 30px;
+    display: flex;
+    border: 1px solid #D4D4D8;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.plans {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.plans > div:first-child, .plans > div:last-child{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+
+    border: 1px solid #D4D4D8;
+}
+
+.plans > div:first-child {gap: 30px;}
+
+.plans > div:last-child {flex: 1;}
+
+.plans .title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.plans .title h4 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: auto;
+    color: #18181B;
+}
+
+.plans .title p, .detail .price, .detail > span:last-child {
+    font-size: 14px;
+    line-height: 140%;
+    color: #71717A;
+}
+
+.detail .price > span {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 110%;
+    color: #18181B;
+}
+
+.plans .detail {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.plans .get-started {
+    border: 1px solid #D4D4D8;
+    border-radius: 8px;
+    padding: 10px;
+    align-self: stretch;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.plans .get-started:hover {
+    background-color: #D4D4D8;
+}
+
+.plans .get-started a {
+    color: #71717A;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.plans > div:last-child ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    color: #71717A;
+}
+
+.plans > div:last-child ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font: 14px/140% var(--font-family);
+}

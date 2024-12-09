@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentmate.ng | Find Properties Near You</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/listings.css">
+    <link rel="stylesheet" href="src/css/top-agents.css">
+    <style>
+        .search-form {
+            display: flex;
+            max-width: 630px;
+        }
+        .listings-page { gap: 25px;}
+        .listings-page h2 { 
+            line-height: 1;
+            padding-bottom: 0;
+        }
+        .listings-page .agents-found {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="head-wrap">
+                <div class="logo__wrap"><a href="index.html"><img style="max-width: 170px;" src="assets/images/logo.png" alt="Logo"></a></div>
+                <nav class="navbar">
+                    <ul class="menu">
+                        <li class="dropdown">
+                            <a href="#">For Sale</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">Land</a></li>
+                                <li><a href="listings.html">House</a></li>
+                                <li><a href="listings.html">Flat & Apartment</a></li>
+                                <li><a href="listings.html">Commercial Property</a></li>
+                                <li><a href="listings.html">All Properties</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">For Rent</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">House</a></li>
+                                <li><a href="listings.html">Office Space</a></li>
+                                <li><a href="listings.html">Land Lease</a></li>
+                                <li><a href="listings.html">Flats & Apartments</a></li>
+                                <li><a href="listings.html">All Properties</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Shortlet</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">Shortlets in Ajah</a></li>
+                                <li><a href="listings.html">Shortlets in Lekki</a></li>
+                                <li><a href="listings.html">All Shortlets</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Flatmates</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">Web Development</a></li>
+                                <li><a href="listings.html">App Development</a></li>
+                                <li><a href="listings.html">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Request</a>
+                            <ul class="submenu">
+                                <li><a href="make-request.html">Post a Request</a></li>
+                                <li><a href="view-all-request.html">All Property Requests</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Agents</a>
+                            <ul class="submenu">
+                                <li><a href="all-agents.html">All Real Estate Agents</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="btn__wrap">
+                    <button class="post-btn">Post Property</button>
+                    <a href="#">Sign Up</a>
+                    <a href="#">Login</a>
+                </div>
+            </div>
+        </header>
+
+
+
+
+
+
+        <div class="search-filter">
+            <form class="search-form" id="searchForm">
+                <div class="form-group">    
+                    <input type="text" id="searchQuery" name="searchQuery" placeholder="Enter a Location " required>
+                    <button class="cta-button" type="submit">
+                        <img src="/assets/icons/search.svg" class="search-icon">
+                        <span>Search</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+
+        
+
+        <!-- ALL THE LISTINGS   -->
+
+        <section class="listings-page">
+            <div>
+                <h2>Real Estate Agents in Lagos <br>
+                    <span class="agents-found">5000 Agents Found</span> 
+                </h2>
+                
+                <div class="the-top-agents card-grid">
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+    
+                    <div class="card agent-card">
+                        <div class="card-img">
+                            <a href="#"><img src="assets/images/agent-x.png" alt=""></a>
+                            <p class="agent-name"><a href="agent-listings.html">Teju Osho Properties and Investments</a></p>
+                        </div>
+                        <div class="card-info">
+                            <div class="badges"><span>Top Rated </span>  <span><img src="assets/images/Verified Icon.svg" alt="">Verified</span></div>
+                            <div><a href="#">View Listings</a></div>
+                            <button>080234567* show</button>
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
+        </section>
+
+        <br><br><br><br><br><br><br>
+
+        
+         <!-- THE INFO ICON  -->
+         
+        <div class="info-icon">
+            <img src="public/fisrcommentinfo.svg" alt="">
+        </div>
+         
+        
+
+        <!-- THE FOOTER  -->
+
+        <footer class="other-footer">   
+            <div>
+                <p>© 2024 RENTMATE, Inc.</p>
+                <ul>
+                    <li><a href="">Terms </a></li>
+                    <li><a href="">Privacy </a></li>
+                    <li><a href="">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li><a href="">About Us </a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            
+        </footer>
+        
+
+
+    </div>
+
+</body>
+</html>

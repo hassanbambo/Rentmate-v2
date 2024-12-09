@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="src/css/dashboard-agent-profile.css">
+    <link rel="stylesheet" href="src/css/post-property.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- THE DASHBOARD MAIN MENU  -->
+
+        <div class="dashboard-menu">
+            <div class="logo"><a href="index.html"><img src="assets/images/logo.png" alt=""></a></div>
+            <div class="menu-earn-extra">
+                <ul>
+                    <li><a href="buddy.html">Switch to Rent Buddy</a></li>
+                    <li><a href="dashboard-agent-profile.html"><img src="assets/icons/view-profile.svg" alt="">View Profile</a></li>
+                    <li><a href="dashboard-listing.html"><img src="assets/icons/listing-hb.svg" alt="">Listings</a></li>
+                    <li><a href="post-property.html"><img src="assets/icons/add-property.svg" alt="">Add Property</a></li>
+                    <li><a href="subscription.html"><img src="assets/icons/subscription.svg" alt="">Subscription</a></li>
+                    <li><a href="community.html"><img src="assets/icons/community.svg" alt="">Join Community</a></li>
+                    <li><a href="settings.html"><img src="assets/icons/setting.svg" alt="">Settings</a></li>
+                    <li><a href="#"><img src="assets/icons/logout.svg" alt="">Log out</a></li>
+                </ul>
+                
+                <div class="earn-extra"><a href="#"><img src="assets/images/earn-extra.png" alt=""></a></div>
+            </div>
+        </div>
+
+
+        <!-- DASHBOARD CONTENT AREA  -->
+
+        <div class="dashboard-main-area">
+            <div>
+                <header>
+                    <h4>Add a Property</h4>
+                    <button style="visibility: hidden;">Add Property</button>
+                </header>
+
+                <div class="verify-now">
+                    <img src="assets/icons/info (1).svg" alt="">
+                    <p>Verify Your Identity by completing your Registration</p>
+                    <a href="#">Verify Now</a>
+                </div>
+
+                <div class="about-property">
+                    <form action="" class="property-form">
+                        <div class="part-1">
+                            <div class="heading"><h3>Tell Us About Your Property</h3></div>
+
+                            <div class="content">
+                                <div class="features">
+                                    <div>
+                                        <label for="title">1. Give your Property a Name</label>
+                                        <input type="text" name="title" id="title" placeholder="5 BedRoom Duplex">
+                                    </div>
+
+                                    <div>
+                                        <label for="property-for">2. What would you like to use the use the property for ?</label>
+                                        <select name="property-for" id="property-for">
+                                            <option value="rent">Rent</option>
+                                            <option value="sale">Sale</option>
+                                            <option value="lease">Lease</option>
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <label for="category">3. Category</label>
+                                        <select name="category" id="category">
+                                            <option>Select Category</option>
+                                            <option>Select Category</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="rooms-bath">
+                                        <h4>4. Select how many bedrooms and bathrooms </h4>
+                
+                                        <div class="bedrooms">
+                                            <span>Bedrooms</span>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>4+</li>
+                                            </ul>
+                                        </div>
+                
+                                        <div class="bed">
+                                            <span>Bed</span>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>4+</li>
+                                            </ul>
+                                        </div>
+                
+                                        <div class="bathroom">
+                                            <span>Bathroom</span>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>4+</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="features">
+                                    <div>
+                                        <label for="amenities">5. Select Ammenitie</label>
+                                        <ul id="amenities">
+                                            <li><img src="assets/icons/wifi.svg" alt="">Wi-Fi</li>
+                                            <li><img src="assets/icons/ac-unit 1.svg" alt="">Air Conditioner</li>
+                                            <li><img src="assets/icons/tv-screen 1.svg" alt="">TV</li>
+                                            <li><img src="assets/icons/wifi.svg" alt="">Wi-Fi</li>
+                                            <li><img src="assets/icons/ac-unit 1.svg" alt="">Air Conditioner</li>
+                                            <li><img src="assets/icons/tv-screen 1.svg" alt="">TV</li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <label for="price">6. Set Price </label>
+                                        <select name="price" id="price">
+                                            <option value="10000000">N10,000,000 Anually</option>
+                                            <option value="100000000">N100,000,000 Anually</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="profile-field">
+                                        <label for="describe">7. Describe Your Poperty</label>
+                                        <textarea name="describe" id="describe" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="part-2" style="display: none;">
+                            <div class="heading"><h3>Tell Us About Your Property</h3></div>
+                            
+                            <div class="content">    
+                                <div class="features">
+                                    <div>
+                                        <label for="street">Street Address</label>
+                                        <input type="text" name="street" id="street" placeholder="18 Omonipotent Street">
+                                    </div>
+
+                                    <div>
+                                        <label for="apt-no">Apt Number</label>
+                                        <input type="text" name="apt-no" id="apt-no" placeholder="183">
+                                    </div>
+
+                                    <div>
+                                        <label for="city">City</label>
+                                        <input type="text" name="city" id="city" placeholder="Lagos Island">
+                                    </div>
+                                </div>
+
+                                <div class="features">
+                                    <div>
+                                        <label for="state">State (optional)</label>
+                                        <input type="text" name="state" id="state" placeholder="Lagos">
+                                    </div>
+
+                                    <div>
+                                        <label for="zip">Zip Code (optional)</label>
+                                        <input type="text" name="zip" id="zip" placeholder="100182">
+                                    </div>
+
+                                    <div>
+                                        <label for="country">Country</label>
+                                        <input type="text" name="country" id="country" placeholder="Nigeria">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="part-3" style="display: none;">
+                            <div class="heading"><h3>Upload atleast 5 pictures</h3></div>
+
+                            <div class="photo-upload">
+                            
+                                <!-- Drop area for drag and drop functionality and image preview -->
+                                <div class="img-grid">
+                                    <div class="previews">
+                                        <div id="drop-area">
+                                            <div>
+                                                <label for="image-upload">Cover Image:</label>
+                                                <input type="file" id="image-upload" name="images" accept="image/*" multiple hidden>
+                            
+                                                <img src="assets/icons/upload.svg" style="width: 50px;height: 50px;" alt="">
+                                                <span>Drag & Drop your Photos here</span>
+                                                <span> or click to upload</span> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="previews"></div>
+                                    <div class="previews"></div>
+                                    <div class="previews"></div>
+                                    <div class="previews"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="back-next">
+                            <button id="backBtn">Back</button>
+                            <button id="nextBtn">Next</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="src/js/post-property.js"></script>
+    <script src="src/js/img-upload-preview.js"></script>
+
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', ()=> {
+
+        const propertyForm1 = document.querySelector('.property-form .part-1');
+        const propertyForm2 = document.querySelector('.property-form .part-2');
+        const propertyForm3 = document.querySelector('.property-form .part-3');
+
+        const backBtn = document.getElementById('backBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        // Initially hide parts 2 and 3
+        propertyForm2.style.display = "none";
+        propertyForm3.style.display = "none";
+
+        nextBtn.addEventListener('click', (event)=> {
+            event.preventDefault();
+            
+            if (propertyForm1.style.display !== "none") {
+                propertyForm1.style.display = "none";
+                propertyForm2.style.display = "flex";
+
+            } else if (propertyForm2.style.display !== "none") {
+                propertyForm2.style.display = "none";
+                propertyForm3.style.display = "flex";
+
+                nextBtn.innerHTML = "Done";
+            }
+        });
+
+        });
+
+    </script> -->
+    
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', ()=> {
+
+            const propertyForm1 = document.querySelector('.property-form .part-1');
+            const propertyForm2 = document.querySelector('.property-form .part-2');
+            const propertyForm3 = document.querySelector('.property-form .part-3');
+
+            const backBtn = document.getElementById('backBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            nextBtn.addEventListener('click', (event)=> {
+                event.preventDefault();
+                
+                if (propertyForm2.style.display === "none") {
+                    propertyForm1.style.display = "none";
+                    propertyForm2.style.display = "flex";
+                    
+                } else if (propertyForm2.style.display === "flex") {
+                    propertyForm2.style.display = "none";
+                    propertyForm3.style.display = "flex";
+
+                } else if (propertyForm1.style.display === "none" && propertyForm2.style.display === "none") {
+                    propertyForm3.style.display = "flex";
+                    nextBtn.innerHTML = "Done"
+                }
+        
+            });
+
+        });
+    </script> -->
+</body>
+</html>

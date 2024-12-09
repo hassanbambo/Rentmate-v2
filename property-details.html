@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentmate.ng | Find Properties Near You</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/property-details.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="head-wrap">
+                <div class="logo__wrap"><a href="index.html"><img style="max-width: 170px;" src="assets/images/logo.png" alt="Logo"></a></div>
+
+                <nav class="navbar">
+                    <ul class="menu">
+                        <li class="dropdown">
+                            <a href="#">For Sale</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">Land</a></li>
+                                <li><a href="listings.html">House</a></li>
+                                <li><a href="listings.html">Flat & Apartment</a></li>
+                                <li><a href="listings.html">Commercial Property</a></li>
+                                <li><a href="listings.html">All Properties</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">For Rent</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">House</a></li>
+                                <li><a href="listings.html">Office Space</a></li>
+                                <li><a href="listings.html">Land Lease</a></li>
+                                <li><a href="listings.html">Flats & Apartments</a></li>
+                                <li><a href="listings.html">All Properties</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Shortlet</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">Shortlets in Ajah</a></li>
+                                <li><a href="listings.html">Shortlets in Lekki</a></li>
+                                <li><a href="listings.html">All Shortlets</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Flatmates</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">Web Development</a></li>
+                                <li><a href="listings.html">App Development</a></li>
+                                <li><a href="listings.html">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Request</a>
+                            <ul class="submenu">
+                                <li><a href="make-request.html">Post a Request</a></li>
+                                <li><a href="view-all-request.html">All Property Requests</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Agents</a>
+                            <ul class="submenu">
+                                <li><a href="all-agents.html">All Real Estate Agents</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="btn__wrap">
+                    <button class="post-btn">Post Property</button>
+                    <a href="#">Sign Up</a>
+                    <a href="#">Login</a>
+                </div>
+            </div>
+
+            <div class="head-wrap-mobile">
+                <a href="index.html"><img style="max-width: 170px;" src="assets/images/logo.png" alt="Logo"></a>
+                <img src="assets/icons/Hamburger.svg" alt="">
+            </div>
+        </header>
+
+        <div class="back-btn"><a href="#"><img src="assets/icons/back-arrow.png" alt=""> Back <span>to Home</span></a></div>
+
+        <!-- THE LISTING AREA  -->
+
+        <section class="listing-area">
+            <div class="listing-details">
+                <div class="listing-info-mobile">
+                    <div class="hidden-overlay-mobile"></div>
+                    <div class="poster">
+                        <img src="public/avatar@2x.png" alt="">
+                        <div>OptionsX</div>
+                    </div>
+                    <div class="title">3 Bed Room Duplex, GRA Ikeja</div>
+                    <div class="location"><img src="public/component-1-1.svg" alt=""><span>Ikeja, Lagos</span></div>
+                    <div class="share-like">
+                        <span><img src="public/component-1-7.svg" alt="">Share</span>
+                        <span><img src="public/component-2.svg" alt="">Like</span>
+                    </div>
+                </div>
+                
+                <div class="listing-gallery">
+                    <div class="shown"><img src="assets/images/gallery1.png" alt=""></div>
+                    <div class="shown"><img src="assets/images/gallery2.png" alt=""></div>
+                    <div class="shown">
+                        <img src="assets/images/gallery3.png" alt=""><span class="remaining-img">+4</span>
+                    </div>
+                    <div class="hidden"><img src="assets/images/image3.jpg"  alt=""></div>
+                    <div class="hidden"><img src="assets/images/image4.jpg"  alt=""></div>
+                    <div class="hidden"><img src="assets/images/image5.jpg" alt=""></div>
+                    <div class="hidden"><img src="assets/images/image6.jpg" alt=""></div>
+                </div>
+                <!-- THE MODAL GALLERY  -->
+
+                <div class="modal" id="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="slider">
+                            <button class="prev">&#10094;</button>
+                            <div class="slides">
+                                <img src="" alt="">
+                            </div>
+                            <button class="next">&#10095;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="listing-title-desktop">
+                    <h1>3 Bedroom Duplex, GRA Ikeja</h1>
+                    <div>
+                        <span><img src="public/component-1-1.svg" alt="">Ikeja, Lagos</span>
+                        <span><img src="public/bed-11.svg" alt="">3 Toilets</span>
+                        <span><img src="public/bathtub-1.svg" alt="">2 Bath</span>
+                    </div>
+                </div>
+                
+                <div class="property-description">
+                    <h4>Property Description</h4>
+                    <p>Prominently positioned on the cusp of the Barangaroo precinct, this generous sized 3 bedroom apartment takes advantage of its prime north western aspect with views stretching from Barangaroo Reserve, Lavender Bay, Sydney Harbour and through to the Blue Mountains. The 141m2 seamless floor plan is amongst the largest of any 3 bedroom layouts in the building and is highly desirable.</p>
+                    <p>-Located on the highest level of this layout<br>
+
+                        -Open plan living and dining areas with floor-to-ceiling glass<br>
+                        
+                        -Fully equipped kitchen complete with a walk-in-pantry<br>
+                        
+                        -Private master bedroom with walk-in-robe, marble ensuite with bathtub and access to the terrace<br>
+                        
+                        -2nd and 3rd bedrooms are both King sized<br>
+                        
+                        -2nd full marble bathroom features another bathtub plus there is an additional powder roo<br>
+                    </p>
+                </div>
+                <div class="inspection-amenities">
+                    <div class="inspection-additional">
+                        <div class="inspection">
+                            <h5>Inspection Times</h5>
+                            <p>Inspection by Booking Only</p>
+                        </div>
+                        <div class="additional">
+                            <h5>Additional notes</h5>
+                            <p>- Check-in schedule: from 15:00 to 18:00 every day<br>
+
+                                - Refund of security deposit to the credit card 24/48h after your departure<br>
+                                
+                                - Check-out schedule: Before 12:00<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="amenities">
+                        <h5>Amenities</h5>
+                        <div>
+                            <div><img src="public/vuesaxboldwifisquare-1.svg" alt=""><span>Wifi</span></div>
+                            <div><img src="public/vuesaxboldwifisquare-1.svg" alt=""><span>Security</span></div>
+                            <div><img src="public/vuesaxboldwifisquare-1.svg" alt=""><span>Parking Space</span></div>
+                            <div><img src="public/vuesaxboldwifisquare-1.svg" alt=""><span>Swimming pool</span></div>
+                            <div><img src="public/vuesaxboldwifisquare-1.svg" alt=""><span>Security</span></div>
+                            <div><img src="public/vuesaxboldwifisquare-1.svg" alt=""><span>24/7 Light</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <aside class="listing-side">
+                <div class="listing-info">
+                    <div class="posted-by">
+                        <div class="hidden-overlay"></div>
+                        <div class="poster">
+                            <img src="public/avatar@2x.png" alt="">
+                            <div><span>Posted by</span><span>OptionsX</span></div>
+                        </div>
+                        <div class="share-property">
+                            <p>3 Bed Room Duplex</p>
+                            <div>
+                                <span><img src="public/component-1-7.svg" alt=""></span>
+                                <span><img src="public/component-2.svg" alt=""></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="property-price">
+                        <div class="price">₦500,000 <span class="rate">monthly</span></div>
+                        <button>Call Agent</button>
+                        <button><img src="public/whatsapp-1.svg" alt="">Chat on WhatsApp</button>
+                    </div>
+                </div>
+
+                <div class="tips">
+                    <h6>Safety Tips</h6>
+                    <ul>
+                        <li><p>It's safer not to pay ahead for inspections</p></li>
+                        <li><p>Ask friends or somebody you trust to accompany you for viewing</p></li>
+                        <li><p>Look around the apartment to ensure it meets your expectations</p></li>
+                        <li><p>Don't pay beforehand if they won't let you move in immediately</p></li>
+                        <li><p>Verify that the account details belong to the right property owner before initiating payment</p></li>
+                    </ul>
+                    <button>Report Agent</button>
+                </div>
+            </aside>
+        </section>
+
+        <!-- THE MAP SECTION  -->
+
+        <section id="mapContainer" class="map-api">
+            <div id="map" class="map">
+                <img src="public/map-placeholder.jpg" alt="">
+            </div>
+
+        </section>
+
+        <!-- SIMILAR PROPERTIES / LISTINGS  -->
+
+        <section class="similar-properties">
+            <div class="similar-listings">
+                <h5>Similar Properties</h5>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-img">
+                            <a href="#"><img src="public/image-2@2x.png" alt=""></a>
+                        </div>
+                        <div class="card-info">
+                            <h6 class="title"><a href="#">4 BedRoom Duplex with BQ</a></h6>
+                            <div class="address">Mile Street Orchid Road Lekki PHASE 1 Lagos Nigeria</div>
+                            <div class="badges"><span>VERIFIED</span><span>RECENTLY POSTED</span></div>
+                            <div class="price-feature">
+                                <div class="price"><span>N4,000,000</span> /Year</div>
+                                <div class="feature">
+                                    <div>
+                                        <img src="public/bed-1.svg" alt="">
+                                        <span>3</span><span>bd</span>
+                                    </div>
+                                    <div>
+                                        <img src="public/bathtub-1.svg" alt="">
+                                        <span>3</span><span>ba</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="love-icon"><img class="love-icon__heart" src="public/shape--heart.svg" alt=""></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <a href="#"><img src="public/image-2@2x.png" alt=""></a>
+                        </div>
+                        <div class="card-info">
+                            <h6 class="title"><a href="#">4 BedRoom Duplex with BQ</a></h6>
+                            <div class="address">Mile Street Orchid Road Lekki PHASE 1 Lagos Nigeria</div>
+                            <div class="badges"><span>VERIFIED</span><span>RECENTLY POSTED</span></div>
+                            <div class="price-feature">
+                                <div class="price"><span>N4,000,000</span> /Year</div>
+                                <div class="feature">
+                                    <div>
+                                        <img src="public/bed-1.svg" alt="">
+                                        <span>3</span><span>bd</span>
+                                    </div>
+                                    <div>
+                                        <img src="public/bathtub-1.svg" alt="">
+                                        <span>3</span><span>ba</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="love-icon"><img class="love-icon__heart" src="public/shape--heart.svg" alt=""></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <a href="#"><img src="public/image-2@2x.png" alt=""></a>
+                        </div>
+                        <div class="card-info">
+                            <h6 class="title"><a href="#">4 BedRoom Duplex with BQ</a></h6>
+                            <div class="address">Mile Street Orchid Road Lekki PHASE 1 Lagos Nigeria</div>
+                            <div class="badges"><span>VERIFIED</span><span>RECENTLY POSTED</span></div>
+                            <div class="price-feature">
+                                <div class="price"><span>N4,000,000</span> /Year</div>
+                                <div class="feature">
+                                    <div>
+                                        <img src="public/bed-1.svg" alt="">
+                                        <span>3</span><span>bd</span>
+                                    </div>
+                                    <div>
+                                        <img src="public/bathtub-1.svg" alt="">
+                                        <span>3</span><span>ba</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="love-icon"><img class="love-icon__heart" src="public/shape--heart.svg" alt=""></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <a href="#"><img src="public/image-2@2x.png" alt=""></a>
+                        </div>
+                        <div class="card-info">
+                            <h6 class="title"><a href="#">4 BedRoom Duplex with BQ</a></h6>
+                            <div class="address">Mile Street Orchid Road Lekki PHASE 1 Lagos Nigeria</div>
+                            <div class="badges"><span>VERIFIED</span><span>RECENTLY POSTED</span></div>
+                            <div class="price-feature">
+                                <div class="price"><span>N4,000,000</span> /Year</div>
+                                <div class="feature">
+                                    <div>
+                                        <img src="public/bed-1.svg" alt="">
+                                        <span>3</span><span>bd</span>
+                                    </div>
+                                    <div>
+                                        <img src="public/bathtub-1.svg" alt="">
+                                        <span>3</span><span>ba</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="love-icon"><img class="love-icon__heart" src="public/shape--heart.svg" alt=""></div>
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- THE FOOTER  -->
+
+        <footer class="main-footer">
+            <div class="brand-copyright">
+                <div class="brand-logo"><img src="assets/images/Logotype.png" alt=""></div>
+                <span class="copyright">Copyright 2024</span>
+            </div>
+
+            <div class="links">
+                <div class="footer-links">
+                    <h6>FOR SALE</h6>
+                    <ul>
+                        <li><a href="#">New Homes</a></li>
+                        <li><a href="#">Commercial properties</a></li>
+                        <li><a href="#">Estate agents</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h6>FOR RENT</h6>
+                    <ul>
+                        <li><a href="#">Commercial properties</a></li>
+                        <li><a href="#">Letting agents</a></li>
+                        <li><a href="#">Subscribe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h6>CONTACT</h6>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Email me</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </footer>
+
+        <footer class="other-footer">   
+            <div>
+                <p>© 2024 RENTMATE, Inc.</p>
+                <ul>
+                    <li><a href="">Terms </a></li>
+                    <li><a href="">Privacy </a></li>
+                    <li><a href="">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li><a href="">About Us </a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            
+        </footer>
+        
+
+
+    </div>
+
+    <script src="src/js/modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentmate.ng | Find Properties Near You</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/buddy.css">
+    <link rel="stylesheet" href="src/css/make-request.css">
+    <style>
+        header .btn__wrap .post-btn {
+            background-color: var(--button-color);
+            color: #fff;
+        }
+        header .btn__wrap button.post-btn:hover {
+            background-color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="head-wrap">
+                <div class="logo__wrap"><a href="index.html"><img style="max-width: 170px;" src="assets/images/logo.png" alt="Logo"></a></div>
+                <nav class="navbar">
+                    <ul class="menu">
+                        <li class="dropdown">
+                            <a href="#">For Sale</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">Land</a></li>
+                                <li><a href="listings.html">House</a></li>
+                                <li><a href="listings.html">Flat & Apartment</a></li>
+                                <li><a href="listings.html">Commercial Property</a></li>
+                                <li><a href="listings.html">All Properties</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">For Rent</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">House</a></li>
+                                <li><a href="listings.html">Office Space</a></li>
+                                <li><a href="listings.html">Land Lease</a></li>
+                                <li><a href="listings.html">Flats & Apartments</a></li>
+                                <li><a href="listings.html">All Properties</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Shortlet</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">Shortlets in Ajah</a></li>
+                                <li><a href="listings.html">Shortlets in Lekki</a></li>
+                                <li><a href="listings.html">All Shortlets</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Flatmates</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">Web Development</a></li>
+                                <li><a href="listings.html">App Development</a></li>
+                                <li><a href="listings.html">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Request</a>
+                            <ul class="submenu">
+                                <li><a href="make-request.html">Post a Request</a></li>
+                                <li><a href="view-all-request.html">All Property Requests</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Agents</a>
+                            <ul class="submenu">
+                                <li><a href="all-agents.html">All Real Estate Agents</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="btn__wrap">
+                    <button class="post-btn">Post a Property</button>
+                    <a href="#">Sign Up</a>
+                    <!-- <a href="#">Login</a> -->
+                </div>
+            </div>
+        </header>
+
+        <!-- HERO SECTION  -->
+        <section class="hero section serach-bar1">
+            <div class="hero-content">
+                <h1>Find buddy connect</h1>
+            
+
+                <div class="cta-buttons">
+                    <div>
+                        <div><a href="#">Looking for a Buddy</a></div>
+                        <div><a href="#">I have a room</a></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        
+
+        <!-- BUDDY STEPS    -->
+
+        <section class="buddy-steps">
+            <div class="steps">
+                <div class="step">
+                    <img src="assets/icons/find.svg" alt="">
+                    <h4>Find</h4>
+                    <p>Easily search for flatmates or tenants that fit your preferences, saving time and effort.</p>
+                </div>
+                <img src="assets/icons/arrow-in-btwn.png" alt="">
+                <div class="step">
+                    <img src="assets/icons/connect.svg" alt="">
+                    <h4>Connect</h4>
+                    <p>Seamlessly connect with potential flatmates through secure communication.</p>
+                </div>
+                <img src="assets/icons/arrow-in-btwn.png" alt="">
+                <div class="step">
+                    <img src="assets/icons/buddy.svg" alt="">
+                    <h4>Buddy</h4>
+                    <p>Match with verified buddies for a trustworthy and comfortable living arrangement.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- THE LISTING AREA  -->
+
+        <section class="buddy-area">
+            
+            <div class="locations">
+                <button class="sort-by"><img src="assets/icons/sort-by.svg" alt="">Sort by</button>
+
+                <ul class="location-filters">
+                    <li>Lekki</li>
+                    <li>Ajah</li>
+                    <li>Victoria Island</li>
+                    <li>Gbagada</li>
+                    <li>Magodo</li>
+                    <li>Berger</li>
+                    <li>Yaba</li>
+                    <li>Alimosho</li>
+                    <li>Badagry</li>
+                    <li>View All</li>
+                </ul>
+            </div>
+
+            <div class="grid-wrapper">
+                <div class="buddy-grid"> 
+                    <div class="buddy-card">
+                        <div>
+                            <div class="user">
+                                <div>
+                                    <div class="user-img"><img src="assets/images/Avatar.png" alt=""></div>
+                                    <div class="name-age-sex">
+                                        <span class="name">Aaron</span>
+                                        <span class="age-sex-occupation">25y Male, Student</span>
+                                    </div>
+                                </div>
+                                <div class="locality">Lekki</div>
+                            </div>
+
+                            <div class="info">
+                                <h3>Student looking for a Room in Lekki and its Environs..</h3>
+                                <p>Hiii my name is Hiba, I'm 21 and I'm starting my LLM International Commercial Law at UCL. I'm looking for a room in .......</p>
+                            </div>
+
+                            <div class="price">
+                                <a href="#"><div class="rate"><strong>N4,000,000</strong> per month</div>
+                                <img src="assets/icons/breadcrumb.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buddy-card">
+                        <div>
+                            <div class="user">
+                                <div>
+                                    <div class="user-img"><img src="assets/images/Avatar.png" alt=""></div>
+                                    <div class="name-age-sex">
+                                        <span class="name">Aaron</span>
+                                        <span class="age-sex-occupation">25y Male, Student</span>
+                                    </div>
+                                </div>
+                                <div class="locality">Lekki</div>
+                            </div>
+
+                            <div class="info">
+                                <h3>Student looking for a Room in Lekki and its Environs..</h3>
+                                <p>Hiii my name is Hiba, I'm 21 and I'm starting my LLM International Commercial Law at UCL. I'm looking for a room in .......</p>
+                            </div>
+
+                            <div class="price">
+                                <a href="#"><div class="rate"><strong>N4,000,000</strong> per month</div>
+                                <img src="assets/icons/breadcrumb.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buddy-card">
+                        <div>
+                            <div class="user">
+                                <div>
+                                    <div class="user-img"><img src="assets/images/Avatar.png" alt=""></div>
+                                    <div class="name-age-sex">
+                                        <span class="name">Aaron</span>
+                                        <span class="age-sex-occupation">25y Male, Student</span>
+                                    </div>
+                                </div>
+                                <div class="locality">Lekki</div>
+                            </div>
+
+                            <div class="info">
+                                <h3>Student looking for a Room in Lekki and its Environs..</h3>
+                                <p>Hiii my name is Hiba, I'm 21 and I'm starting my LLM International Commercial Law at UCL. I'm looking for a room in .......</p>
+                            </div>
+
+                            <div class="price">
+                                <a href="#"><div class="rate"><strong>N4,000,000</strong> per month</div>
+                                <img src="assets/icons/breadcrumb.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buddy-card">
+                        <div>
+                            <div class="user">
+                                <div>
+                                    <div class="user-img"><img src="assets/images/Avatar.png" alt=""></div>
+                                    <div class="name-age-sex">
+                                        <span class="name">Aaron</span>
+                                        <span class="age-sex-occupation">25y Male, Student</span>
+                                    </div>
+                                </div>
+                                <div class="locality">Lekki</div>
+                            </div>
+
+                            <div class="info">
+                                <h3>Student looking for a Room in Lekki and its Environs..</h3>
+                                <p>Hiii my name is Hiba, I'm 21 and I'm starting my LLM International Commercial Law at UCL. I'm looking for a room in .......</p>
+                            </div>
+
+                            <div class="price">
+                                <a href="#"><div class="rate"><strong>N4,000,000</strong> per month</div>
+                                <img src="assets/icons/breadcrumb.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buddy-card">
+                        <div>
+                            <div class="user">
+                                <div>
+                                    <div class="user-img"><img src="assets/images/Avatar.png" alt=""></div>
+                                    <div class="name-age-sex">
+                                        <span class="name">Aaron</span>
+                                        <span class="age-sex-occupation">25y Male, Student</span>
+                                    </div>
+                                </div>
+                                <div class="locality">Lekki</div>
+                            </div>
+
+                            <div class="info">
+                                <h3>Student looking for a Room in Lekki and its Environs..</h3>
+                                <p>Hiii my name is Hiba, I'm 21 and I'm starting my LLM International Commercial Law at UCL. I'm looking for a room in .......</p>
+                            </div>
+
+                            <div class="price">
+                                <a href="#"><div class="rate"><strong>N4,000,000</strong> per month</div>
+                                <img src="assets/icons/breadcrumb.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buddy-card">
+                        <div>
+                            <div class="user">
+                                <div>
+                                    <div class="user-img"><img src="assets/images/Avatar.png" alt=""></div>
+                                    <div class="name-age-sex">
+                                        <span class="name">Aaron</span>
+                                        <span class="age-sex-occupation">25y Male, Student</span>
+                                    </div>
+                                </div>
+                                <div class="locality">Lekki</div>
+                            </div>
+
+                            <div class="info">
+                                <h3>Student looking for a Room in Lekki and its Environs..</h3>
+                                <p>Hiii my name is Hiba, I'm 21 and I'm starting my LLM International Commercial Law at UCL. I'm looking for a room in .......</p>
+                            </div>
+
+                            <div class="price">
+                                <a href="#"><div class="rate"><strong>N4,000,000</strong> per month</div>
+                                <img src="assets/icons/breadcrumb.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buddy-card">
+                        <div>
+                            <div class="user">
+                                <div>
+                                    <div class="user-img"><img src="assets/images/Avatar.png" alt=""></div>
+                                    <div class="name-age-sex">
+                                        <span class="name">Aaron</span>
+                                        <span class="age-sex-occupation">25y Male, Student</span>
+                                    </div>
+                                </div>
+                                <div class="locality">Lekki</div>
+                            </div>
+
+                            <div class="info">
+                                <h3>Student looking for a Room in Lekki and its Environs..</h3>
+                                <p>Hiii my name is Hiba, I'm 21 and I'm starting my LLM International Commercial Law at UCL. I'm looking for a room in .......</p>
+                            </div>
+
+                            <div class="price">
+                                <a href="#"><div class="rate"><strong>N4,000,000</strong> per month</div>
+                                <img src="assets/icons/breadcrumb.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buddy-card">
+                        <div>
+                            <div class="user">
+                                <div>
+                                    <div class="user-img"><img src="assets/images/Avatar.png" alt=""></div>
+                                    <div class="name-age-sex">
+                                        <span class="name">Aaron</span>
+                                        <span class="age-sex-occupation">25y Male, Student</span>
+                                    </div>
+                                </div>
+                                <div class="locality">Lekki</div>
+                            </div>
+
+                            <div class="info">
+                                <h3>Student looking for a Room in Lekki and its Environs..</h3>
+                                <p>Hiii my name is Hiba, I'm 21 and I'm starting my LLM International Commercial Law at UCL. I'm looking for a room in .......</p>
+                            </div>
+
+                            <div class="price">
+                                <a href="#"><div class="rate"><strong>N4,000,000</strong> per month</div>
+                                <img src="assets/icons/breadcrumb.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="subscribe"><a href="#">Subscribe for free</a></div>
+
+            
+        </section>
+
+        
+
+        <!-- FAQ SECTION   -->
+
+        <section class="faq">
+            <div class="faq-header">
+                <h2>Frequently Asked </h2>
+                <p>Your Questions Answered</p>
+            </div>
+
+            <div class="faq-list">
+                <details class="the-faqs">
+                    <summary>What makes RentMate different from other agency platforms in Nigeria ?</summary>
+                    <p>Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text</p>
+                </details>
+                <details class="the-faqs">
+                    <summary>How do we book for inspections ?</summary>
+                    <p>Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text</p>
+                </details>
+                <details class="the-faqs">
+                    <summary>Is the subscription Free?</summary>
+                    <p>Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text</p>
+                </details>
+                <details class="the-faqs">
+                    <summary>How can Rentmate sell my property ?</summary>
+                    <p>Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text</p>
+                </details>
+                <details class="the-faqs">
+                    <summary>What is the difference between Verified and Executive Listings ?</summary>
+                    <p>Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text Lorem ipsum gykhhjm Lorem Ispum text</p>
+                </details>
+            </div>
+        </section>
+
+        <br><br><br>
+
+</body>
+</html>

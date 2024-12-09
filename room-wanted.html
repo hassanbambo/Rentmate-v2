@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentmate.ng | Find Properties Near You</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/buddy.css">
+    <link rel="stylesheet" href="src/css/buddy-profile.css">
+    <link rel="stylesheet" href="src/css/post-property.css">
+    <style>
+        .about-property {max-width: 923px; margin: 0 auto;}
+        .profile-field textarea {
+            color: #667085;
+            font: 14px/30px var(--font-family);
+            padding: 10px 14px;
+            height: auto;
+            width: 100%;
+            resize: none;
+            outline: 0;
+            border: 1px solid #D0D5DD;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="head-wrap">
+                <div class="logo__wrap"><a href="index.html"><img style="max-width: 170px;" src="assets/images/logo.png" alt="Logo"></a></div>
+                <nav class="navbar">
+                    <ul class="menu">
+                        
+                        <li class="dropdown">
+                            <a href="#">Subscription</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">Shortlets in Ajah</a></li>
+                                <li><a href="listings.html">Shortlets in Lekki</a></li>
+                                <li><a href="listings.html">All Shortlets</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Inbox</a>
+                            <ul class="submenu">
+                                <li><a href="listings.html">Web Development</a></li>
+                                <li><a href="listings.html">App Development</a></li>
+                                <li><a href="listings.html">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Request</a>
+                            <ul class="submenu">
+                                <li><a href="make-request.html">Post a Request</a></li>
+                                <li><a href="view-all-request.html">All Property Requests</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="btn__wrap">
+                    <button class="post-btn"><img src="assets/icons/plus.svg" alt=""> Rent Buddy </button>
+                    <button class="icon-btn icon-btn--heart"><img class="icon" src="assets/icons/Heart.svg" alt=""></button>
+                    <button class="icon-btn icon-btn--user"><span><img class="icon" src="assets/icons/Hamburger.svg" alt=""></span><span><img class="icon" src="assets/icons/User.svg" alt=""></span></button>
+                </div>
+            </div>
+        </header>
+
+
+        <section class="buddy-section">
+            <div class="back-to-buddy"><a href=""><img src="assets/icons/back-arrow.png" alt=""> Back to profile </a></div>
+
+            <div class="about-property">
+                <form action="" class="property-form">
+                    <div class="part-1">
+                        <div class="heading"><h3>Post a Room wanted ad</h3></div>
+
+                        <div class="content">
+                            <div class="features">
+                                <div>
+                                    <label for="title">1. What would you like to use the use the property for ?</label>
+                                    <input type="text" name="title" id="title" placeholder="5 BedRoom Duplex">
+                                </div>
+
+                                <div>
+                                    <label for="property-for">2. Your Gender ?</label>
+                                    <select name="property-for" id="property-for">
+                                    
+                                        <option value="sale">Male</option>
+                                        <option value="lease">Female</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="category">3. Room Type</label>
+                                    <select name="category" id="category">
+                                        <option>Select Category</option>
+                                        <option>Select Category</option>
+                                    </select>
+                                </div>
+
+                                <div class="rooms-bath">
+                                    <h4>4. Select how many bedrooms and bathrooms </h4>
+            
+                                    <div class="bedrooms">
+                                        <span>Bedrooms</span>
+                                        <ul>
+                                            <li>1</li>
+                                            <li>2</li>
+                                            <li>3</li>
+                                            <li>4</li>
+                                            <li>4+</li>
+                                        </ul>
+                                    </div>
+            
+                                    <div class="bed">
+                                        <span>Bed</span>
+                                        <ul>
+                                            <li>1</li>
+                                            <li>2</li>
+                                            <li>3</li>
+                                            <li>4</li>
+                                            <li>4+</li>
+                                        </ul>
+                                    </div>
+            
+                                    <div class="bathroom">
+                                        <span>Bathroom</span>
+                                        <ul>
+                                            <li>1</li>
+                                            <li>2</li>
+                                            <li>3</li>
+                                            <li>4</li>
+                                            <li>4+</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="features">
+                                <div>
+                                    <label for="amenities">5. Select Ammenitie</label>
+                                    <ul id="amenities">
+                                        <li><img src="assets/icons/wifi.svg" alt="">Wi-Fi</li>
+                                        <li><img src="assets/icons/ac-unit 1.svg" alt="">Air Conditioner</li>
+                                        <li><img src="assets/icons/tv-screen 1.svg" alt="">TV</li>
+                                        <li><img src="assets/icons/wifi.svg" alt="">Wi-Fi</li>
+                                        <li><img src="assets/icons/ac-unit 1.svg" alt="">Air Conditioner</li>
+                                        <li><img src="assets/icons/tv-screen 1.svg" alt="">TV</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <label for="price">6. Set Price </label>
+                                    <select name="price" id="price">
+                                        <option value="10000000">N10,000,000 Anually</option>
+                                        <option value="100000000">N100,000,000 Anually</option>
+                                    </select>
+                                </div>
+
+                                <div class="profile-field">
+                                    <label for="describe">7. Describe Your Poperty</label>
+                                    <textarea name="describe" id="describe" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="back-next">
+                        <button id="backBtn">Back</button>
+                        <button id="nextBtn">Next</button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+        <br><br><br>
+
+</body>
+</html>

@@ -1,0 +1,409 @@
+
+section.hero {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    /* max-height: 590px; */
+    height: 590px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../assets/images/group-afro-americans-working-together.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity for the overlay */
+    z-index: 1;
+  }
+  
+.hero > * {
+    position: relative;
+    z-index: 100;
+}
+
+
+.hero-content {
+    text-align: center;
+    margin: auto;
+    max-width: 793px;
+    height: 313px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.hero-content h1 {
+    /* font: var(--h1-font); */
+    font-size: 58px;
+    line-height: auto;
+    margin-top: 0;
+}
+
+.search-form {
+    display: flex;
+    min-width: 600px;
+
+}
+
+/* ************************************************************************************* */
+.top-agents {
+    padding: 25px 70px;
+}
+
+.top-agents-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-agents-header h4 {
+    /* color: #676767; */
+    font: 500 24px/28px var(--font-family);
+}
+
+.top-agents-header p {
+    /* color: #676767; */
+    font: 500 18px/28px var(--font-family);
+}
+
+.top-agents-header p a {
+    color: #676767;
+}
+
+/* *************************** AGENTS CARD ******************************************  */
+
+.the-top-agents .agent-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 270px;
+    /* width: 313px; */
+    max-width: 313px;
+    height: 369px;
+    max-height: 369px;
+    padding: 0 0 8px;
+    gap: 3px;
+    overflow: hidden;
+}
+
+.agent-card .card-img {
+    width: 100%;
+    max-height: 187px;
+    position: relative;
+}
+
+.agent-card .card-img .agent-name {
+    position: absolute;
+    left: 24px;
+    top: 120px; 
+    max-width: 70%;
+    visibility: hidden;
+}
+
+.agent-card .card-img .agent-name a {
+    color: #fff;
+}
+
+.agent-card .card-info {
+    margin: 0;
+    width: 100%;
+    /* max-height: 187px; */
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 12px;
+}
+
+.card-info .badges {
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.card-info .badges > span:first-child {
+    background-color: #E0FDD4;
+    color: #78D253;
+}
+
+.card-info .badges > span:last-child {
+    display: flex;
+    align-items: center;
+    background-color: #EFF8FF;
+    color: #0096FF;
+}
+
+.agent-card .card-info > div:nth-child(2), .agent-card .card-info > button {
+    align-self: stretch;
+    
+    border-radius: 8px;
+    font: 500 18px /24px var(--font-family);
+}
+
+.agent-card .card-info > div:nth-child(2) {
+    padding: 0;
+    outline: 1px solid black;
+    display: flex;
+    justify-content: center;
+    border: 0;
+    outline: 0;
+    /* align-items: stretch; */
+    /* overflow: hidden; */
+}
+
+.agent-card .card-info > div:nth-child(2) a {
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    background-color: #78D253;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    transition: opacity .3s ease;
+    
+}
+
+.agent-card .card-info > div:nth-child(2) a:hover {
+    opacity: .85;
+}
+
+.agent-card .card-info > button {
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #ccc;
+    transition: background-color .3s ease;
+}
+
+.agent-card .card-info > button:hover {
+    background-color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *************************************************************************************
+
+                        MOBILE SCREEN STYLES 
+                        
+************************************************************************************** */
+
+@media screen and (max-width: 600px) {
+        
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity for the overlay */
+        z-index: 1;
+    }
+    
+    .hero > * {
+        position: relative;
+        z-index: 100;
+    }
+
+
+    .hero-content {
+        text-align: center;
+        margin: auto;
+        max-width: 100%;
+        max-height: 313px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        gap: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+        line-height: auto;
+        margin-top: 0;
+    }
+
+    .search-form {
+        width: 100%;
+        min-width: 100%;
+        min-height: 60px;
+        height: auto;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .search-form > .form-group {
+        width: 100%;
+    }
+
+    /* ************************************************************************************* */
+    .top-agents {
+        padding: 25px 70px;
+    }
+
+    .top-agents-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .top-agents-header h4 {
+        /* color: #676767; */
+        font: 500 24px/28px var(--font-family);
+    }
+
+    .top-agents-header p {
+        /* color: #676767; */
+        font: 500 18px/28px var(--font-family);
+    }
+
+    .top-agents-header p a {
+        color: #676767;
+    }
+
+    /* *************************** AGENTS CARD ******************************************  */
+
+    .card-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: auto;
+    }
+
+    .the-top-agents .agent-card {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 270px;
+        /* width: 313px; */
+        max-width: 313px;
+        height: 369px;
+        max-height: 369px;
+        padding: 0 0 8px;
+        gap: 3px;
+        overflow: hidden;
+    }
+
+    .agent-card .card-img {
+        width: 100%;
+        max-height: 187px;
+        position: relative;
+    }
+
+    .agent-card .card-img .agent-name {
+        position: absolute;
+        left: 24px;
+        top: 120px; 
+        max-width: 70%;
+        visibility: hidden;
+    }
+
+    .agent-card .card-img .agent-name a {
+        color: #fff;
+    }
+
+    .agent-card .card-info {
+        margin: 0;
+        width: 100%;
+        /* max-height: 187px; */
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .card-info .badges {
+        margin-bottom: 0;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .card-info .badges > span:first-child {
+        background-color: #E0FDD4;
+        color: #78D253;
+    }
+
+    .card-info .badges > span:last-child {
+        display: flex;
+        align-items: center;
+        background-color: #EFF8FF;
+        color: #0096FF;
+    }
+
+    .agent-card .card-info > div:nth-child(2), .agent-card .card-info > button {
+        align-self: stretch;
+        
+        border-radius: 8px;
+        font: 500 18px /24px var(--font-family);
+    }
+
+    .agent-card .card-info > div:nth-child(2) {
+        padding: 0;
+        outline: 1px solid black;
+        display: flex;
+        justify-content: center;
+        border: 0;
+        outline: 0;
+        /* align-items: stretch; */
+        /* overflow: hidden; */
+    }
+
+    .agent-card .card-info > div:nth-child(2) a {
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        background-color: #78D253;
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        transition: opacity .3s ease;
+        
+    }
+
+    .agent-card .card-info > div:nth-child(2) a:hover {
+        opacity: .85;
+    }
+
+    .agent-card .card-info > button {
+        padding: 10px;
+        outline: 0;
+        border: 1px solid #ccc;
+        transition: background-color .3s ease;
+    }
+
+    .agent-card .card-info > button:hover {
+        background-color: #ccc;
+    }
+
+
+
+}
